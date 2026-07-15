@@ -1,0 +1,638 @@
+[
+  {
+    "timestamp": "2026-07-15 12:33:38",
+    "candidate_name": "Arjun Verma",
+    "email": "arjun.verma.py@gmail.com",
+    "phone": "+919876543210",
+    "location": "Hyderabad, India",
+    "total_years_experience": 6.0,
+    "jd_name": "Senior Python Backend Engineer",
+    "overall_fit_score": 100,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_3_arjun_verma_duplicate.pdf",
+    "category_scores": {
+      "technical_skills_score": 35,
+      "relevant_experience_score": 30,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 20
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Direct HR Tech / ATS / Payroll domain expertise (Ats, Payroll, Attendance).",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Ananya Deshmukh",
+    "email": "ananya.deshmukh.ml@gmail.com",
+    "phone": "+919332211009",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 88,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 32,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Arjun Verma",
+    "email": "arjun.verma.py@gmail.com",
+    "phone": "+919876543210",
+    "location": "Hyderabad, India",
+    "total_years_experience": 6.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 100,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_3_arjun_verma_duplicate.pdf",
+    "category_scores": {
+      "technical_skills_score": 35,
+      "relevant_experience_score": 30,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 20
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Direct HR Tech / ATS / Payroll domain expertise (Ats, Payroll, Attendance).",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Priya Sharma",
+    "email": "priya.sharma.data@gmail.com",
+    "phone": "+919812345678",
+    "location": "Hyderabad, India",
+    "total_years_experience": 5.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 91,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 35,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi, Flask)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Arjun Verma",
+    "email": "arjun.verma.py@gmail.com",
+    "phone": "+919876543210",
+    "location": "Hyderabad, India",
+    "total_years_experience": 6.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 100,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_1_arjun_verma_sr_python.pdf",
+    "category_scores": {
+      "technical_skills_score": 35,
+      "relevant_experience_score": 30,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 20
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Direct HR Tech / ATS / Payroll domain expertise (Ats, Payroll, Attendance).",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Rahul Gupta",
+    "email": "rahul.gupta.java@yahoo.com",
+    "phone": "+919700112233",
+    "location": "Bangalore, India",
+    "total_years_experience": 7.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 47,
+    "recommendation": "Reject / Low Fit",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 8,
+      "relevant_experience_score": 14,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 10
+    },
+    "key_strengths": [
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering."
+    ],
+    "missing_skills_and_gaps": [
+      "Located outside Hyderabad (Bangalore, India). May require relocation or remote work arrangement.",
+      "Primary experience is not in Python backend ecosystems required by Keka."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Sneha Reddy",
+    "email": "sneha.reddy.dev@gmail.com",
+    "phone": "+919988776655",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 82,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 26,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Django, Flask)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Vikram Singh",
+    "email": "vikram.singh.devops@outlook.com",
+    "phone": "+919445566778",
+    "location": "Hyderabad, India",
+    "total_years_experience": 6.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 74,
+    "recommendation": "Interview / Good Fit",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 16,
+      "relevant_experience_score": 30,
+      "education_and_certifications_score": 13,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Kavya Nair",
+    "email": "kavya.nair.hr@gmail.com",
+    "phone": "+919112233445",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 67,
+    "recommendation": "Hold / Potential Pipeline",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 8,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 13,
+      "keka_domain_and_cultural_fit_score": 20
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Direct HR Tech / ATS / Payroll domain expertise (Ats, Payroll, Attendance)."
+    ],
+    "missing_skills_and_gaps": [
+      "Could show more explicit background in high-throughput task queues (Celery/Kafka) for large-scale HR data.",
+      "Primary experience is not in Python backend ecosystems required by Keka."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Rohit Kumar",
+    "email": "rohit.kumar.fs@gmail.com",
+    "phone": "+919667788990",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 82,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 26,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Could show more explicit background in high-throughput task queues (Celery/Kafka) for large-scale HR data."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:35:34",
+    "candidate_name": "Rohit Kumar",
+    "email": "rohit.kumar.fs@gmail.com",
+    "phone": "9667788990",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 82,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_8_rohit_kumar_fullstack.pdf",
+    "category_scores": {
+      "technical_skills_score": 26,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Could show more explicit background in high-throughput task queues (Celery/Kafka) for large-scale HR data."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:15",
+    "candidate_name": "Arjun Verma",
+    "email": "arjun.verma.py@gmail.com",
+    "phone": "+919876543210",
+    "location": "Hyderabad, India",
+    "total_years_experience": 6.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 100,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_3_arjun_verma_duplicate.pdf",
+    "category_scores": {
+      "technical_skills_score": 35,
+      "relevant_experience_score": 30,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 20
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Direct HR Tech / ATS / Payroll domain expertise (Ats, Payroll, Attendance).",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:15",
+    "candidate_name": "Ananya Deshmukh",
+    "email": "ananya.deshmukh.ml@gmail.com",
+    "phone": "+919332211009",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 88,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 32,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:15",
+    "candidate_name": "Arjun Verma",
+    "email": "arjun.verma.py@gmail.com",
+    "phone": "+919876543210",
+    "location": "Hyderabad, India",
+    "total_years_experience": 6.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 100,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_3_arjun_verma_duplicate.pdf",
+    "category_scores": {
+      "technical_skills_score": 35,
+      "relevant_experience_score": 30,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 20
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Direct HR Tech / ATS / Payroll domain expertise (Ats, Payroll, Attendance).",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:15",
+    "candidate_name": "Priya Sharma",
+    "email": "priya.sharma.data@gmail.com",
+    "phone": "+919812345678",
+    "location": "Hyderabad, India",
+    "total_years_experience": 5.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 91,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 35,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi, Flask)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:15",
+    "candidate_name": "Arjun Verma",
+    "email": "arjun.verma.py@gmail.com",
+    "phone": "+919876543210",
+    "location": "Hyderabad, India",
+    "total_years_experience": 6.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 100,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_1_arjun_verma_sr_python.pdf",
+    "category_scores": {
+      "technical_skills_score": 35,
+      "relevant_experience_score": 30,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 20
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Direct HR Tech / ATS / Payroll domain expertise (Ats, Payroll, Attendance).",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:15",
+    "candidate_name": "Rahul Gupta",
+    "email": "rahul.gupta.java@yahoo.com",
+    "phone": "+919700112233",
+    "location": "Bangalore, India",
+    "total_years_experience": 7.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 47,
+    "recommendation": "Reject / Low Fit",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 8,
+      "relevant_experience_score": 14,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 10
+    },
+    "key_strengths": [
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering."
+    ],
+    "missing_skills_and_gaps": [
+      "Located outside Hyderabad (Bangalore, India). May require relocation or remote work arrangement.",
+      "Primary experience is not in Python backend ecosystems required by Keka."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:15",
+    "candidate_name": "Sneha Reddy",
+    "email": "sneha.reddy.dev@gmail.com",
+    "phone": "+919988776655",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 82,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 26,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering.",
+      "Solid Python backend stack mastery (Python, Django, Flask)."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:15",
+    "candidate_name": "Vikram Singh",
+    "email": "vikram.singh.devops@outlook.com",
+    "phone": "+919445566778",
+    "location": "Hyderabad, India",
+    "total_years_experience": 6.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 74,
+    "recommendation": "Interview / Good Fit",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 16,
+      "relevant_experience_score": 30,
+      "education_and_certifications_score": 13,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Strong demonstrated background in asynchronous data pipelines and automation engineering."
+    ],
+    "missing_skills_and_gaps": [
+      "Minor gap: Can evaluate system design depth during technical rounds."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:16",
+    "candidate_name": "Kavya Nair",
+    "email": "kavya.nair.hr@gmail.com",
+    "phone": "+919112233445",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 67,
+    "recommendation": "Hold / Potential Pipeline",
+    "is_duplicate": false,
+    "duplicate_type": "None",
+    "duplicate_of_filename": null,
+    "category_scores": {
+      "technical_skills_score": 8,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 13,
+      "keka_domain_and_cultural_fit_score": 20
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Direct HR Tech / ATS / Payroll domain expertise (Ats, Payroll, Attendance)."
+    ],
+    "missing_skills_and_gaps": [
+      "Could show more explicit background in high-throughput task queues (Celery/Kafka) for large-scale HR data.",
+      "Primary experience is not in Python backend ecosystems required by Keka."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:16",
+    "candidate_name": "Rohit Kumar",
+    "email": "rohit.kumar.fs@gmail.com",
+    "phone": "+919667788990",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 82,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_9_rohit_kumar_duplicate.pdf",
+    "category_scores": {
+      "technical_skills_score": 26,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Could show more explicit background in high-throughput task queues (Celery/Kafka) for large-scale HR data."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  },
+  {
+    "timestamp": "2026-07-15 12:36:16",
+    "candidate_name": "Rohit Kumar",
+    "email": "rohit.kumar.fs@gmail.com",
+    "phone": "9667788990",
+    "location": "Hyderabad, India",
+    "total_years_experience": 4.0,
+    "jd_name": "backend_engineer.txt",
+    "overall_fit_score": 82,
+    "recommendation": "Strong Hire / Immediate Interview",
+    "is_duplicate": true,
+    "duplicate_type": "Semantic Profile Match (Identical Email/Phone)",
+    "duplicate_of_filename": "resume_8_rohit_kumar_fullstack.pdf",
+    "category_scores": {
+      "technical_skills_score": 26,
+      "relevant_experience_score": 26,
+      "education_and_certifications_score": 15,
+      "keka_domain_and_cultural_fit_score": 15
+    },
+    "key_strengths": [
+      "Located in Hyderabad (Hyderabad, India), perfectly aligned with Keka's hybrid engineering team.",
+      "Solid Python backend stack mastery (Python, Fastapi, Django)."
+    ],
+    "missing_skills_and_gaps": [
+      "Could show more explicit background in high-throughput task queues (Celery/Kafka) for large-scale HR data."
+    ],
+    "scoring_engine": "Keka High-Precision Local Heuristic Engine (Offline / Zero-Latency)"
+  }
+]

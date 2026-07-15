@@ -1,0 +1,102 @@
+[
+  {
+    "record_id": "124d5caef8",
+    "filename": "resume_10_ananya_deshmukh_ml_eng.pdf",
+    "name": "Ananya Deshmukh",
+    "email": "ananya.deshmukh.ml@gmail.com",
+    "phone": "+919332211009",
+    "exact_sha256": "5bf3a6397bf0ee5c6261bfc9ac6516152d4071a1836eca12b5dbdc060253467b",
+    "semantic_fingerprint": "175a4bc0304e40de97acb29b5a99b738",
+    "raw_clean_text": "ananya deshmukh hyderabad, telangana | ananya.deshmukh.ml@gmail.com | +91-9332211009 | github.com/ananyaml lead ai / ml engineer (llms & rag) professional summary applied artificial intelligence and machine learning engineer with 4+ years of experience building and deploying production-grade llm applications, rag pipelines, and semantic document understanding systems. deep expertise in groq llama, openai apis, langchain, and python vector search engines. technical skills python, pytorch, langchain, llamaindex, groq api (llama 3), openai gpt-4, vector databases (weaviate, pgvector, pinecone), fastapi, document ocr/parsing, nlp semantic search, docker, aws sagemaker. professional experience applied ai lead engineer | cognitiveai india, hyderabad (2022 - present) - architected and deployed production rag document analysis pipelines using python, fastapi, and groq llama-3 models. - built multi-format document parser (pdf, docx) with intelligent layout detection and semantic vector embeddings. - optimized llm prompt guardrails and evaluation metrics, improving automated scoring accuracy by 38% over baseline keyword matching. - collaborated with product engineers to serve ai endpoints with sub-500ms response times under heavy load. machine learning engineer | datasense systems, hyderabad (2020 - 2022) - developed nlp classification and entity extraction models using pytorch and huggingface transformers. - deployed ml inference services in docker containers on aws ecs with asynchronous task queues. education & certifications m.tech in artificial intelligence & ml | iiit hyderabad (2018 - 2020)"
+  },
+  {
+    "record_id": "7ecaf48c90",
+    "filename": "resume_1_arjun_verma_sr_python.pdf",
+    "name": "Arjun Verma",
+    "email": "arjun.verma.py@gmail.com",
+    "phone": "+919876543210",
+    "exact_sha256": "cf05d995bc2df9eb1b285c2726e51bb9af9581db047d5503f642d387270bad4b",
+    "semantic_fingerprint": "386c0a954c499ae095695a6128f0d282",
+    "raw_clean_text": "arjun verma hyderabad, telangana | arjun.verma.py@gmail.com | +91-9876543210 | linkedin.com/in/arjunverma-py senior python backend engineer professional summary passionate and results-driven senior python engineer with 6+ years of experience architecting high-throughput distributed backend services, asynchronous pipelines, and restful apis. specialized in fastapi, django, celery, and postgresql with a proven track record of processing millions of daily transactions in hr tech and enterprise automation. technical skills python (asyncio, typing), fastapi, django rest framework, celery, rabbitmq, redis, postgresql, sqlalchemy, docker, kubernetes, aws (ec2, s3, rds), git, pytest, microservices architecture, ats & payroll data pipelines. professional experience lead python developer | techflow systems, hyderabad (2022 - present) - architected and deployed high-concurrency fastapi microservices handling 5m+ daily api requests with <30ms average latency. - designed asynchronous celery task pipelines with redis broker for real-time employee attendance and payroll calculations. - reduced postgresql query execution time by 62% through optimized indexing, table partitioning, and connection pooling. - mentored a team of 6 backend developers and established strict code review and pytest ci/cd standards. senior backend engineer | cloudscale hr solutions, hyderabad (2019 - 2022) - built core applicant tracking system (ats) backend modules using django and postgresql. - integrated multi-format resume parsing and candidate ranking pipelines processing 10,000+ monthly applications. - deployed containerized services on aws ecs using docker and terraform with automated prometheus observability. education & certifications b.tech in computer science & engineering | iit hyderabad (2015 - 2019) | gpa: 8.8/10"
+  },
+  {
+    "record_id": "fcd16207d0",
+    "filename": "resume_2_priya_sharma_data_eng.pdf",
+    "name": "Priya Sharma",
+    "email": "priya.sharma.data@gmail.com",
+    "phone": "+919812345678",
+    "exact_sha256": "ab2fa3d3131c212960d55ccc7c1f5c2f44d6a281c640d83dba1096a225f52070",
+    "semantic_fingerprint": "73d095025ef89b8a442c426d46f99d59",
+    "raw_clean_text": "priya sharma hyderabad, telangana | priya.sharma.data@gmail.com | +91-9812345678 | github.com/priyasharma-data senior data & backend automation engineer professional summary data-oriented backend engineer with 5 years of experience in python automation, etl pipeline architecture, and high-volume data handling. expert in building scalable data processing engines with airflow, celery, fastapi, and complex sql databases. technical skills python, fastapi, apache airflow, celery, pandas, pyspark, postgresql, mongodb, redis, apache kafka, docker, aws s3/redshift, ci/cd automation, data warehousing, high throughput pipelines. professional experience senior data platform engineer | nexacorp india, hyderabad (2021 - present) - engineered fault-tolerant distributed data pipelines using python and celery processing over 20m daily user log events. - built internal automation apis using fastapi to feed cleaned data directly into analytics and machine learning models. - managed high-performance postgresql clusters and implemented automated data deduplication and validation crons. python backend developer | fintrack analytics, hyderabad (2019 - 2021) - developed automated backend services using python and flask for financial transaction processing. - designed automated reporting tools and integrated third-party rest apis with robust retry mechanisms. education & certifications b.e. in information technology | osmania university, hyderabad (2015 - 2019) | distinction"
+  },
+  {
+    "record_id": "12d083ed2c",
+    "filename": "resume_3_arjun_verma_duplicate.pdf",
+    "name": "Arjun Verma",
+    "email": "arjun.verma.py@gmail.com",
+    "phone": "+919876543210",
+    "exact_sha256": "e0cb614676c17d2b7d6f3b66f3673ea81c95d757e0bc4d5995591ab1eb8d5ff9",
+    "semantic_fingerprint": "386c0a954c499ae095695a6128f0d282",
+    "raw_clean_text": "arjun verma hyderabad, india | arjun.verma.py@gmail.com | +91 9876543210 | linkedin.com/in/arjunverma-py senior python backend architect & developer professional summary passionate and results-driven senior python engineer with 6+ years of experience architecting high-throughput distributed backend services, asynchronous pipelines, and restful apis. specialized in fastapi, django, celery, and postgresql with a proven track record of processing millions of daily transactions in hr tech and enterprise automation. technical skills python (asyncio), fastapi, django rest framework, celery, rabbitmq, redis, postgresql, sqlalchemy, docker, kubernetes, aws, pytest, microservices. professional experience lead python developer | techflow systems (hyderabad) (2022 - current) - architected and deployed high-concurrency fastapi microservices handling 5m+ daily api requests with <30ms average latency. - designed asynchronous celery task pipelines with redis broker for real-time employee attendance and payroll calculations. - reduced postgresql query execution time by 62% through optimized indexing, table partitioning, and connection pooling. senior backend engineer | cloudscale hr solutions (hyderabad) (2019 - 2022) - built core applicant tracking system (ats) backend modules using django and postgresql. - integrated multi-format resume parsing and candidate ranking pipelines processing 10,000+ monthly applications. education & certifications bachelor of technology in computer science | iit hyderabad (2015 - 2019)"
+  },
+  {
+    "record_id": "951fd214e0",
+    "filename": "resume_4_rahul_gupta_java_legacy.pdf",
+    "name": "Rahul Gupta",
+    "email": "rahul.gupta.java@yahoo.com",
+    "phone": "+919700112233",
+    "exact_sha256": "edb6e52dc9a11639be2f1081bcdee7971a08bd0617e517a28e83f39513177296",
+    "semantic_fingerprint": "f1f6cbeb5bc87b9f610d1fe729079124",
+    "raw_clean_text": "rahul gupta bangalore, karnataka | rahul.gupta.java@yahoo.com | +91-9700112233 senior java springboot engineer professional summary accomplished enterprise java developer with 7 years of experience specializing in java 11/17, spring boot, hibernate, and oracle sql. experienced in banking and retail domain monoliths and microservices. technical skills java 17, spring boot, spring security, hibernate orm, oracle db, mysql, apache tomcat, soap, xml, junit, maven, jenkins, monolithic architectures. professional experience lead java specialist | global tech systems, bangalore (2020 - present) - developed enterprise banking microservices using java spring boot and hibernate orm. - maintained legacy soap web services and migrated sql queries on oracle 19c database. - coordinated with qa teams to execute integration testing and jenkins deployment pipelines. java developer | enterprise solutions ltd, pune (2017 - 2020) - implemented business logic layers in java 8 using spring mvc and jsp for e-commerce portals. - wrote stored procedures and triggers in mysql for order tracking modules. education & certifications b.tech in electronics & communication | vit vellore (2013 - 2017)"
+  },
+  {
+    "record_id": "e971043324",
+    "filename": "resume_5_sneha_reddy_jr_backend.pdf",
+    "name": "Sneha Reddy",
+    "email": "sneha.reddy.dev@gmail.com",
+    "phone": "+919988776655",
+    "exact_sha256": "bf2f9ce8307f7cc3e1a03444b43fe296a88f993249accee4a2c9bb4b29314679",
+    "semantic_fingerprint": "f751e0c15a94d589d3085584d114798b",
+    "raw_clean_text": "sneha reddy hyderabad, telangana | sneha.reddy.dev@gmail.com | +91-9988776655 junior python developer professional summary enthusiastic junior software engineer with 1.5 years of hands-on experience in python, django, and rest api development. quick learner passionate about automation, clean coding, and learning high-scale backend architectures. technical skills python, django, flask, sqlite, postgresql (basic), html/css, git, postman, linux command line, basic docker. professional experience junior python developer | startup hub, hyderabad (2023 - present) - assisted senior engineers in building restful apis using django rest framework for customer management modules. - wrote python scripts to automate daily data backups and generate csv reports for accounting teams. - fixed bugs in frontend-backend integration using postman and pytest unit tests. education & certifications b.tech in computer science | jntu hyderabad (2019 - 2023) | gpa: 8.5/10"
+  },
+  {
+    "record_id": "a36bebc30c",
+    "filename": "resume_6_vikram_singh_devops.pdf",
+    "name": "Vikram Singh",
+    "email": "vikram.singh.devops@outlook.com",
+    "phone": "+919445566778",
+    "exact_sha256": "eec621b3e2be9ba8b7fa0075502d634aa8ca260b26af47d10b011f6657a11f73",
+    "semantic_fingerprint": "d44066883383c9d5e11d2146fa610df8",
+    "raw_clean_text": "vikram singh hyderabad, telangana | vikram.singh.devops@outlook.com | +91-9445566778 senior devops & cloud infrastructure engineer professional summary devops specialist with 6 years of experience managing high-availability aws cloud infrastructure, kubernetes clusters, and automated ci/cd pipelines. strong proficiency in python automation scripting and infrastructure as code. technical skills aws (eks, ec2, vpc, iam, route53), kubernetes, docker, terraform, ansible, python scripting, bash, jenkins, github actions, prometheus, grafana, argocd. professional experience cloud devops lead | infrastack technologies, hyderabad (2021 - present) - designed and provisioned multi-region aws cloud architectures using terraform and ansible for 50+ microservices. - managed production kubernetes (eks) clusters handling 20,000 requests/sec with automated horizontal pod autoscaling. - wrote python and bash automation scripts to detect and clean up orphaned cloud resources, saving $4,000/month. devops engineer | cloudnine solutions, hyderabad (2018 - 2021) - maintained jenkins ci/cd pipelines for python and node.js applications with automated security scanning. - implemented centralized logging and alerting using elk stack and prometheus. education & certifications b.e. in computer science | andhra university (2014 - 2018)"
+  },
+  {
+    "record_id": "624cb27a01",
+    "filename": "resume_7_kavya_nair_hr_analyst.pdf",
+    "name": "Kavya Nair",
+    "email": "kavya.nair.hr@gmail.com",
+    "phone": "+919112233445",
+    "exact_sha256": "08e716ef3659cf56c7b4efeaaeb8cce94112237eefe13df9464a65513f3580b2",
+    "semantic_fingerprint": "5f2575d8c03d0a2b39442b620547f163",
+    "raw_clean_text": "kavya nair hyderabad, telangana | kavya.nair.hr@gmail.com | +91-9112233445 senior hr operations & ats specialist professional summary dedicated human resources and talent acquisition professional with 4+ years of experience managing full-cycle recruitment, employee onboarding, and hrms platform administration. deep expertise in optimizing ats workflows. technical skills talent acquisition, ats management (keka, greenhouse, lever), employee onboarding, payroll coordination, hr operations, excel/google sheets pivot tables, stakeholder management. professional experience talent acquisition specialist | peoplefirst hr, hyderabad (2021 - present) - screened and interviewed 1,000+ engineering and product candidates annually, maintaining a 25% hire-to-offer ratio. - administered keka hrms platform for attendance tracking, leave policies, and employee document verification. - collaborated with engineering hiring managers to draft job descriptions and optimize sourcing channels. hr coordinator | talentsource india, hyderabad (2020 - 2021) - coordinated interview scheduling and candidate feedback loops across 5 regional offices. - prepared weekly recruitment analytics reports using excel and google sheets. education & certifications mba in human resource management | icfai university, hyderabad (2018 - 2020)"
+  },
+  {
+    "record_id": "96e4f64311",
+    "filename": "resume_8_rohit_kumar_fullstack.pdf",
+    "name": "Rohit Kumar",
+    "email": "rohit.kumar.fs@gmail.com",
+    "phone": "+919667788990",
+    "exact_sha256": "04c1d20999cdc7651a55affe42a57018235a96423f6ec3581f5fbb4d5c007f86",
+    "semantic_fingerprint": "7e2708f4ee56c118b62de83ca204dae3",
+    "raw_clean_text": "rohit kumar hyderabad, telangana | rohit.kumar.fs@gmail.com | +91-9667788990 | github.com/rohitkumar-dev full stack engineer (python + react) professional summary versatile full stack software engineer with 4 years of experience delivering high-impact saas web applications. expert at pairing modern react frontend interfaces with high-speed python/fastapi backend architectures. technical skills python, fastapi, django, react.js, typescript, next.js, redux, tailwind css, postgresql, docker, git, rest & graphql apis, jest, pytest. professional experience full stack engineer | webpulse tech, hyderabad (2022 - present) - built intuitive customer-facing dashboards using react, typescript, and tailwind css serving 100k+ active users. - developed high-speed restful backend microservices using python fastapi and postgresql with jwt authentication. - reduced initial frontend page load times by 45% through code splitting and efficient backend response payloads. software engineer | agiledev solutions, hyderabad (2020 - 2022) - built end-to-end features for internal crm software using python django and react. - designed relational sql schemas and implemented automated data validation testing. education & certifications b.tech in information technology | nit warangal (2016 - 2020)"
+  },
+  {
+    "record_id": "7d28bc3549",
+    "filename": "resume_9_rohit_kumar_duplicate.pdf",
+    "name": "Rohit Kumar",
+    "email": "rohit.kumar.fs@gmail.com",
+    "phone": "9667788990",
+    "exact_sha256": "fd742af1228481fe9ddf30fa8aaa50976ced7a848ad8381acc2312f9ddf139f5",
+    "semantic_fingerprint": "7e2708f4ee56c118b62de83ca204dae3",
+    "raw_clean_text": "rohit kumar hyderabad, india - rohit.kumar.fs@gmail.com - 9667788990 - github.com/rohitkumar-dev senior full stack python/react developer professional summary versatile full stack software engineer with 4+ years of experience delivering high-impact saas web applications. expert at pairing modern react frontend interfaces with high-speed python/fastapi backend architectures. technical skills python, fastapi, django, react.js, typescript, next.js, redux, tailwind css, postgresql, docker, git, rest & graphql apis. professional experience full stack engineer | webpulse tech (hyderabad) (2022 to present) - built intuitive customer-facing dashboards using react, typescript, and tailwind css serving 100k+ active users. - developed high-speed restful backend microservices using python fastapi and postgresql with jwt authentication. - reduced initial frontend page load times by 45% through code splitting and efficient backend response payloads. software engineer | agiledev solutions (hyderabad) (2020 to 2022) - built end-to-end features for internal crm software using python django and react. - designed relational sql schemas and implemented automated data validation testing. education & certifications bachelor of technology in it | nit warangal (2016 - 2020)"
+  }
+]

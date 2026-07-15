@@ -1,0 +1,41 @@
+================================================================================
+KEKA HR TECH - JOB DESCRIPTION
+Position: Senior Python Backend Engineer (Platform & Automation)
+Location: Hyderabad, Telangana, India (Hybrid / Office)
+Experience: 4 - 8 Years
+Department: Engineering (Core HR & ATS Platform)
+================================================================================
+
+ABOUT KEKA:
+Keka is one of India's fastest-growing HR tech platforms, headquartered in Hyderabad with 500+ employees and serving 6,500+ enterprises globally. We are a product-obsessed company building the operating system for HR, payroll, attendance, and applicant tracking (ATS). Our backend processes massive daily data pipelines (millions of attendance logs, payroll calculations, and resume processing events) where speed, reliability, and automation are paramount.
+
+ROLE OVERVIEW:
+We are looking for a Senior Python Backend Engineer to join our Core Platform & Automation team in Hyderabad. You will architect, build, and optimize high-throughput distributed backend services, asynchronous event pipelines, and LLM-powered ATS automation features using Python, FastAPI, Django, Celery, and PostgreSQL.
+
+KEY RESPONSIBILITIES:
+- Architect and develop scalable, high-concurrency microservices using Python (FastAPI, Django, AsyncIO).
+- Build robust data processing pipelines capable of handling massive daily HR datasets (payroll crons, applicant resume parsing, employee attendance events) using Celery, RabbitMQ/Redis, and Apache Kafka.
+- Design clean RESTful APIs and GraphQL interfaces for internal product modules and 3rd-party integrations.
+- Optimize database queries, indexing strategies, and schema migrations in PostgreSQL and Redis.
+- Collaborate with Product and AI/ML teams to integrate LLM workflows (LLaMA, OpenAI, RAG) for automated resume intelligence, applicant scoring, and smart HR workflows.
+- Implement strict automated testing (PyTest), CI/CD pipelines, and observability (Prometheus, Grafana, OpenTelemetry).
+- Mentor junior developers and enforce strict clean code, typing, and architectural standards.
+
+REQUIRED TECHNICAL SKILLS & QUALIFICATIONS:
+- 4+ years of professional backend software development experience in Python.
+- Deep mastery of modern Python frameworks: FastAPI, Django / Django REST Framework (DRF), or Flask.
+- Strong hands-on experience with asynchronous task queues: Celery, RQ, or Kafka/RabbitMQ with Redis.
+- Advanced database design and query optimization skills in PostgreSQL, including SQLAlchemy / Django ORM.
+- Experience with containerization and cloud deployments: Docker, Kubernetes, AWS (EC2, S3, RDS, ECS/EKS).
+- Solid understanding of distributed system patterns, caching strategies, rate limiting, and REST API design.
+- Familiarity with or interest in integrating Applied AI / NLP / LLM APIs (OpenAI, Groq LLaMA, LangChain) into production workflows.
+
+NICE TO HAVE / BONUS SKILLS:
+- Experience in HR Tech, FinTech, ATS, or Payroll processing architectures.
+- Experience building search & ranking engines (Elasticsearch, Weaviate, pgvector).
+- Active open-source contributions or technical blog posts.
+
+WHY JOIN KEKA?
+- Work on massive scale problems in a product-driven Hyderabad tech hub.
+- High autonomy, competitive compensation, and direct impact on thousands of businesses.
+- A culture that celebrates engineering excellence, automation, and continuous innovation.

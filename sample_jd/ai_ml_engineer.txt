@@ -1,0 +1,24 @@
+================================================================================
+KEKA HR TECH - JOB DESCRIPTION
+Position: Lead AI / ML Engineer (Resume Intelligence & ATS Automation)
+Location: Hyderabad, Telangana, India
+Experience: 3 - 7 Years
+Department: Applied AI / Product Engineering
+================================================================================
+
+ABOUT THE ROLE:
+Keka processes thousands of job applications across client organizations every day. We are upgrading our ATS screening from basic keyword matching to semantic LLM-powered resume intelligence. We are seeking a Lead AI/ML Engineer to own the design, evaluation, and scaling of applied LLM systems, RAG pipelines, and automated document understanding features.
+
+KEY RESPONSIBILITIES:
+- Design and deploy LLM applications using modern open-source models (Llama 3, Mistral) and commercial APIs (OpenAI, Groq).
+- Build production document ingestion pipelines for multi-format resumes (PDF, DOCX) using advanced OCR, layout parsing, and semantic chunking.
+- Implement vector search, embedding retrieval, and prompt engineering frameworks (LangChain, LlamaIndex, pgvector).
+- Create automated evaluation benchmarks and scoring guardrails to ensure fairness, accuracy, and zero bias in candidate evaluation.
+- Integrate AI microservices with Keka's primary Python/FastAPI backend infrastructure.
+
+REQUIRED SKILLS:
+- Strong programming skills in Python (FastAPI, PyTorch, Pandas).
+- Proven track record of deploying LLM features, RAG architectures, and NLP models in production environments.
+- Deep familiarity with Groq LLaMA, OpenAI GPT-4, and embedding generation.
+- Hands-on experience with vector databases (Pinecone, Qdrant, pgvector, or Weaviate).
+- Strong foundation in statistical evaluation, prompt optimization, and asynchronous Python API serving.

@@ -1,0 +1,22 @@
+================================================================================
+KEKA HR TECH - JOB DESCRIPTION
+Position: Senior Full Stack Engineer (Python + React)
+Location: Hyderabad, Telangana, India
+Experience: 3 - 6 Years
+Department: Core ATS & Portal Team
+================================================================================
+
+ROLE OVERVIEW:
+Join Keka's core product team in Hyderabad to build next-generation interfaces and scalable APIs for our Applicant Tracking System and Employee Self-Service portals.
+
+KEY RESPONSIBILITIES:
+- Develop sleek, high-performance web applications using React, TypeScript, and Tailwind CSS.
+- Build resilient, secure REST and GraphQL APIs using Python (FastAPI / Django).
+- Integrate automated resume scoring, candidate pipelines, and real-time dashboard notifications.
+- Work closely with UX designers to craft intuitive workflows for HR managers and recruiters.
+
+REQUIRED SKILLS:
+- 3+ years of full stack development experience.
+- Backend: Mastery of Python, FastAPI or Django, and PostgreSQL.
+- Frontend: Mastery of React, TypeScript, Redux/Zustand, and modern UI frameworks.
+- Experience with Docker, Git CI/CD, and AWS cloud environments.
