@@ -24,8 +24,8 @@ class KekaSheetsLogger:
     to Google Sheets, or falls back to local CSV/JSON persistence when API credentials are not set.
     """
 
-    DEFAULT_CSV_PATH = "./keka_sheets_audit_log.csv"
-    DEFAULT_JSON_PATH = "./keka_sheets_audit_log.json"
+    DEFAULT_CSV_PATH = "/tmp/keka_sheets_audit_log.csv"
+    DEFAULT_JSON_PATH = "/tmp/keka_sheets_audit_log.json"
 
     def __init__(self, sheet_id: Optional[str] = None, credentials_path: Optional[str] = None):
         self.sheet_id = sheet_id or os.getenv("GOOGLE_SHEET_ID", "").strip()

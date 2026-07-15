@@ -36,7 +36,7 @@ LAST_BULK_DATA = {}
 BASE_DIR = "."
 SAMPLE_RESUMES_DIR = os.path.join(BASE_DIR, "sample_resumes")
 SAMPLE_JD_DIR = os.path.join(BASE_DIR, "sample_jd")
-UPLOAD_DIR = os.path.join(BASE_DIR, "uploads")
+UPLOAD_DIR = "/tmp/uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 

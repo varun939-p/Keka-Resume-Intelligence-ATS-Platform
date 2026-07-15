@@ -27,7 +27,7 @@ class ResumeParser:
         "HR Tech & Domain": ["ats", "payroll", "attendance", "hrms", "keka", "recruitment", "talent acquisition"]
     }
 
-    def __init__(self, registry_file: str = "./dedup_registry.json"):
+    def __init__(self, registry_file: str = "/tmp/dedup_registry.json"):
         self.registry_file = registry_file
         self.registry = self._load_registry()
 
