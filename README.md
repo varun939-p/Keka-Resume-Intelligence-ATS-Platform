@@ -12,6 +12,12 @@
 
 </div>
 
+## 🎥 Project Walkthrough Video
+
+[![Watch the 5-Minute Walkthrough on Loom](https://cdn.loom.com/sessions/thumbnails/942f148659e6439ea4d83f5d73935d63-with-play.gif)](https://www.loom.com/share/942f148659e6439ea4d83f5d73935d63)
+
+> **👉 [Click the visual preview above or right here to watch the full 5-minute live demo on Loom!](https://www.loom.com/share/942f148659e6439ea4d83f5d73935d63)**
+
 ---
 
 ## 🎯 Executive Summary: Why Keka Needs Semantic Resume Intelligence
