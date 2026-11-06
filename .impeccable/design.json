@@ -1,0 +1,1883 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T11:22:16Z",
+  "title": "Design System: Keka Resume Intelligence",
+  "extensions": {
+    "colorMeta": {
+      "page": {
+        "role": "neutral",
+        "displayName": "Bone Ground",
+        "canonical": "#f3f2ee",
+        "tonalRamp": [
+          "#0c0b09",
+          "#262522",
+          "#43423f",
+          "#62615e",
+          "#83827f",
+          "#a6a5a1",
+          "#cac9c5",
+          "#efeeea"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Soft Bone",
+        "canonical": "#eeede8",
+        "tonalRamp": [
+          "#0c0b08",
+          "#262521",
+          "#43423e",
+          "#62615d",
+          "#83827e",
+          "#a6a5a0",
+          "#cac9c4",
+          "#efeee9"
+        ]
+      },
+      "sunken": {
+        "role": "neutral",
+        "displayName": "Sunken Bone",
+        "canonical": "#f8f7f4",
+        "tonalRamp": [
+          "#0c0b09",
+          "#262523",
+          "#434240",
+          "#62615f",
+          "#838280",
+          "#a6a5a2",
+          "#cac9c6",
+          "#efeeeb"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "canonical": "#1c1b19",
+        "tonalRamp": [
+          "#0c0b09",
+          "#262523",
+          "#434240",
+          "#62615f",
+          "#838280",
+          "#a6a5a2",
+          "#cac9c6",
+          "#f0eeeb"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Graphite Two",
+        "canonical": "#45423c",
+        "tonalRamp": [
+          "#0d0b06",
+          "#27251f",
+          "#45423c",
+          "#64615a",
+          "#85827b",
+          "#a8a59e",
+          "#ccc9c1",
+          "#f2eee7"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Warm Muted",
+        "canonical": "#68645c",
+        "tonalRamp": [
+          "#0e0b05",
+          "#28251e",
+          "#45423a",
+          "#656159",
+          "#868279",
+          "#a9a59c",
+          "#cdc9c0",
+          "#f3eee5"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgb(28 27 25 / 0.10)",
+        "tonalRamp": [
+          "#0c0b09",
+          "#262523",
+          "#434240",
+          "#62615f",
+          "#838280",
+          "#a6a5a2",
+          "#cac9c6",
+          "#f0eeeb"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "rgb(28 27 25 / 0.18)",
+        "tonalRamp": [
+          "#0c0b09",
+          "#262523",
+          "#434240",
+          "#62615f",
+          "#838280",
+          "#a6a5a2",
+          "#cac9c6",
+          "#f0eeeb"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Petrol",
+        "canonical": "#145a6b",
+        "tonalRamp": [
+          "#010e12",
+          "#052a33",
+          "#0d4a58",
+          "#296b7c",
+          "#4d8d9f",
+          "#70b0c3",
+          "#9dd3e4",
+          "#d5f5ff"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Deep Petrol",
+        "canonical": "#0f4c5b",
+        "tonalRamp": [
+          "#020d11",
+          "#0a2a32",
+          "#184956",
+          "#326a7a",
+          "#548c9c",
+          "#77afc0",
+          "#a2d2e1",
+          "#d5f5ff"
+        ]
+      },
+      "on-accent": {
+        "role": "primary",
+        "displayName": "On Petrol",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "brass": {
+        "role": "secondary",
+        "displayName": "Brass Mark",
+        "canonical": "#c9a24a",
+        "tonalRamp": [
+          "#110a00",
+          "#312301",
+          "#543e04",
+          "#7b5c06",
+          "#a27c1c",
+          "#c69f47",
+          "#e6c57d",
+          "#ffedc7"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Night Petrol Rail",
+        "canonical": "#0f2a31",
+        "tonalRamp": [
+          "#060c0f",
+          "#19282c",
+          "#2f464d",
+          "#4b666e",
+          "#6b8890",
+          "#8dabb4",
+          "#b4ced6",
+          "#e0f2f8"
+        ]
+      },
+      "rail-ink": {
+        "role": "neutral",
+        "displayName": "Rail Ink",
+        "canonical": "#e4ecec",
+        "tonalRamp": [
+          "#070c0c",
+          "#202626",
+          "#3d4343",
+          "#5c6363",
+          "#7d8484",
+          "#9fa7a7",
+          "#c3cbcb",
+          "#e8f0f0"
+        ]
+      },
+      "rail-muted": {
+        "role": "neutral",
+        "displayName": "Rail Muted",
+        "canonical": "#9bb0b2",
+        "tonalRamp": [
+          "#070c0d",
+          "#1d2728",
+          "#354547",
+          "#526567",
+          "#738789",
+          "#95aaac",
+          "#bbcdcf",
+          "#e5f1f3"
+        ]
+      },
+      "rail-line": {
+        "role": "neutral",
+        "displayName": "Rail Hairline",
+        "canonical": "rgb(255 255 255 / 0.09)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "rail-hover": {
+        "role": "neutral",
+        "displayName": "Rail Hover",
+        "canonical": "rgb(255 255 255 / 0.06)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "rail-active": {
+        "role": "neutral",
+        "displayName": "Rail Active",
+        "canonical": "rgb(255 255 255 / 0.11)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "rail-ok": {
+        "role": "status",
+        "displayName": "Rail OK",
+        "canonical": "#6ac6a6",
+        "tonalRamp": [
+          "#000f09",
+          "#002d20",
+          "#084e3b",
+          "#0c7258",
+          "#369678",
+          "#5db99a",
+          "#90dcbf",
+          "#c9fce8"
+        ]
+      },
+      "band-short": {
+        "role": "status",
+        "displayName": "Viridian",
+        "canonical": "#288e70",
+        "tonalRamp": [
+          "#000f09",
+          "#012d21",
+          "#044e3b",
+          "#037357",
+          "#329678",
+          "#5aba9a",
+          "#8edcbf",
+          "#c8fce8"
+        ]
+      },
+      "band-review": {
+        "role": "status",
+        "displayName": "Cobalt",
+        "canonical": "#3660a3",
+        "tonalRamp": [
+          "#030b1c",
+          "#0d2448",
+          "#1d4078",
+          "#3660a3",
+          "#5682c8",
+          "#78a6ee",
+          "#aacbff",
+          "#e5efff"
+        ]
+      },
+      "band-hold": {
+        "role": "status",
+        "displayName": "Yellow Ochre",
+        "canonical": "#d1a55a",
+        "tonalRamp": [
+          "#120900",
+          "#332101",
+          "#573c03",
+          "#805902",
+          "#a47a2c",
+          "#c99d52",
+          "#e9c384",
+          "#feecce"
+        ]
+      },
+      "band-rejected": {
+        "role": "status",
+        "displayName": "Stone",
+        "canonical": "#a6a199",
+        "tonalRamp": [
+          "#0e0b06",
+          "#28241e",
+          "#46413a",
+          "#656159",
+          "#86827a",
+          "#a9a49c",
+          "#cec8c0",
+          "#f3eee5"
+        ]
+      },
+      "band-dup": {
+        "role": "status",
+        "displayName": "Mulberry",
+        "canonical": "#823a5c",
+        "tonalRamp": [
+          "#17050d",
+          "#3c1528",
+          "#662947",
+          "#8e4567",
+          "#b36688",
+          "#d988ab",
+          "#f8b1cf",
+          "#fee7f0"
+        ]
+      },
+      "st-short": {
+        "role": "status",
+        "displayName": "Viridian Text",
+        "canonical": "#0f5642",
+        "tonalRamp": [
+          "#010f09",
+          "#072c21",
+          "#134d3c",
+          "#2e6f5a",
+          "#51917a",
+          "#74b59d",
+          "#a0d7c2",
+          "#d3f9e9"
+        ]
+      },
+      "st-review": {
+        "role": "status",
+        "displayName": "Cobalt Text",
+        "canonical": "#23457b",
+        "tonalRamp": [
+          "#040b1a",
+          "#122543",
+          "#244170",
+          "#3d6199",
+          "#5e83be",
+          "#7fa6e4",
+          "#aacbfe",
+          "#e5efff"
+        ]
+      },
+      "st-hold": {
+        "role": "status",
+        "displayName": "Yellow Ochre Text",
+        "canonical": "#6d4f19",
+        "tonalRamp": [
+          "#110901",
+          "#322205",
+          "#563d0d",
+          "#7a5b27",
+          "#9d7d49",
+          "#c19f6b",
+          "#e2c497",
+          "#feecd0"
+        ]
+      },
+      "st-rejected": {
+        "role": "status",
+        "displayName": "Stone Text",
+        "canonical": "#56524b",
+        "tonalRamp": [
+          "#0e0b06",
+          "#28251e",
+          "#45413b",
+          "#656159",
+          "#86827a",
+          "#a9a49d",
+          "#cdc8c0",
+          "#f3eee5"
+        ]
+      },
+      "st-dup": {
+        "role": "status",
+        "displayName": "Mulberry Text",
+        "canonical": "#6f2d4c",
+        "tonalRamp": [
+          "#16050c",
+          "#3b1727",
+          "#652b46",
+          "#8c4766",
+          "#b16887",
+          "#d68aaa",
+          "#f6b3ce",
+          "#fee7f0"
+        ]
+      },
+      "st-danger": {
+        "role": "status",
+        "displayName": "Burnt Sienna Text",
+        "canonical": "#87381f",
+        "tonalRamp": [
+          "#190501",
+          "#411608",
+          "#6d2a14",
+          "#97462d",
+          "#bc684e",
+          "#e38b70",
+          "#ffb49e",
+          "#ffe9e3"
+        ]
+      },
+      "tint-short": {
+        "role": "status",
+        "displayName": "Viridian Tint",
+        "canonical": "#e7f6ef",
+        "tonalRamp": [
+          "#040e09",
+          "#1d2823",
+          "#394540",
+          "#58655f",
+          "#798680",
+          "#9ba9a2",
+          "#bfcdc6",
+          "#e4f3ec"
+        ]
+      },
+      "tint-review": {
+        "role": "status",
+        "displayName": "Cobalt Tint",
+        "canonical": "#e9f1fe",
+        "tonalRamp": [
+          "#070b13",
+          "#20252f",
+          "#3c424d",
+          "#5b626d",
+          "#7c838e",
+          "#9ea6b2",
+          "#c2cad6",
+          "#e7effc"
+        ]
+      },
+      "tint-hold": {
+        "role": "status",
+        "displayName": "Yellow Ochre Tint",
+        "canonical": "#fff1da",
+        "tonalRamp": [
+          "#0e0b06",
+          "#2a241a",
+          "#4a4030",
+          "#6b5f4c",
+          "#8d816c",
+          "#b0a38e",
+          "#d3c8b5",
+          "#f5ede0"
+        ]
+      },
+      "tint-rejected": {
+        "role": "status",
+        "displayName": "Stone Tint",
+        "canonical": "#f0ede9",
+        "tonalRamp": [
+          "#0d0b08",
+          "#272522",
+          "#44423e",
+          "#63615d",
+          "#84827e",
+          "#a7a4a1",
+          "#cbc9c5",
+          "#f1eeea"
+        ]
+      },
+      "tint-dup": {
+        "role": "status",
+        "displayName": "Mulberry Tint",
+        "canonical": "#f9edf2",
+        "tonalRamp": [
+          "#10090c",
+          "#2b2226",
+          "#483f43",
+          "#685e62",
+          "#8a7f83",
+          "#ada1a6",
+          "#d1c5ca",
+          "#f7ebf0"
+        ]
+      },
+      "tint-danger": {
+        "role": "status",
+        "displayName": "Burnt Sienna Tint",
+        "canonical": "#ffede7",
+        "tonalRamp": [
+          "#0e0a09",
+          "#2b2320",
+          "#4b3f3b",
+          "#6c5d58",
+          "#8e7e79",
+          "#b2a19b",
+          "#d4c5c1",
+          "#f6ece8"
+        ]
+      },
+      "edge-short": {
+        "role": "status",
+        "displayName": "Viridian Edge",
+        "canonical": "#bedecf",
+        "tonalRamp": [
+          "#060d0a",
+          "#1a2922",
+          "#30483e",
+          "#4c695c",
+          "#6c8a7d",
+          "#8fad9f",
+          "#b6d1c4",
+          "#e1f4eb"
+        ]
+      },
+      "edge-review": {
+        "role": "status",
+        "displayName": "Cobalt Edge",
+        "canonical": "#c2d5f2",
+        "tonalRamp": [
+          "#070b12",
+          "#1d2533",
+          "#354357",
+          "#52627b",
+          "#72839e",
+          "#94a6c2",
+          "#bacae3",
+          "#e5efff"
+        ]
+      },
+      "edge-hold": {
+        "role": "status",
+        "displayName": "Yellow Ochre Edge",
+        "canonical": "#f0d2a3",
+        "tonalRamp": [
+          "#110a02",
+          "#30220a",
+          "#543e18",
+          "#775c30",
+          "#997e51",
+          "#bda073",
+          "#dec59e",
+          "#feecd1"
+        ]
+      },
+      "edge-rejected": {
+        "role": "status",
+        "displayName": "Stone Edge",
+        "canonical": "#d9d4ce",
+        "tonalRamp": [
+          "#0e0b07",
+          "#282420",
+          "#45413c",
+          "#65605b",
+          "#86817c",
+          "#a9a49e",
+          "#cdc8c2",
+          "#f3eee7"
+        ]
+      },
+      "edge-dup": {
+        "role": "status",
+        "displayName": "Mulberry Edge",
+        "canonical": "#e9cdd7",
+        "tonalRamp": [
+          "#0f090b",
+          "#2d2126",
+          "#4f3c43",
+          "#715a62",
+          "#947a84",
+          "#b79da6",
+          "#d9c2ca",
+          "#fae9ef"
+        ]
+      },
+      "edge-danger": {
+        "role": "status",
+        "displayName": "Burnt Sienna Edge",
+        "canonical": "#f4cbbf",
+        "tonalRamp": [
+          "#120906",
+          "#32201a",
+          "#573a31",
+          "#7b584d",
+          "#9d786e",
+          "#c29b8f",
+          "#e3c0b6",
+          "#fee9e3"
+        ]
+      },
+      "gl-short": {
+        "role": "status",
+        "displayName": "Viridian Glyph",
+        "canonical": "#1a886a",
+        "tonalRamp": [
+          "#000f09",
+          "#002d21",
+          "#004f3b",
+          "#0e7258",
+          "#2f9678",
+          "#58ba9a",
+          "#8cdcbf",
+          "#c7fce8"
+        ]
+      },
+      "gl-review": {
+        "role": "status",
+        "displayName": "Cobalt Glyph",
+        "canonical": "#3660a3",
+        "tonalRamp": [
+          "#030b1c",
+          "#0d2448",
+          "#1d4078",
+          "#3660a3",
+          "#5682c8",
+          "#78a6ee",
+          "#aacbff",
+          "#e5efff"
+        ]
+      },
+      "gl-hold": {
+        "role": "status",
+        "displayName": "Yellow Ochre Glyph",
+        "canonical": "#ab7d25",
+        "tonalRamp": [
+          "#120900",
+          "#332100",
+          "#583c00",
+          "#7f590a",
+          "#a77920",
+          "#cb9c49",
+          "#ebc27e",
+          "#ffecce"
+        ]
+      },
+      "gl-rejected": {
+        "role": "status",
+        "displayName": "Stone Glyph",
+        "canonical": "#847f78",
+        "tonalRamp": [
+          "#0e0b06",
+          "#28241f",
+          "#46413b",
+          "#65605a",
+          "#87817a",
+          "#a9a49d",
+          "#cec8c1",
+          "#f3eee6"
+        ]
+      },
+      "gl-dup": {
+        "role": "status",
+        "displayName": "Mulberry Glyph",
+        "canonical": "#823a5c",
+        "tonalRamp": [
+          "#17050d",
+          "#3c1528",
+          "#662947",
+          "#8e4567",
+          "#b36688",
+          "#d988ab",
+          "#f8b1cf",
+          "#fee7f0"
+        ]
+      },
+      "ok": {
+        "role": "status",
+        "displayName": "Pass Signal",
+        "canonical": "#288e70",
+        "tonalRamp": [
+          "#000f09",
+          "#012d21",
+          "#044e3b",
+          "#037357",
+          "#329678",
+          "#5aba9a",
+          "#8edcbf",
+          "#c8fce8"
+        ]
+      },
+      "warn": {
+        "role": "status",
+        "displayName": "Attention Signal",
+        "canonical": "#ab7d25",
+        "tonalRamp": [
+          "#120900",
+          "#332100",
+          "#583c00",
+          "#7f590a",
+          "#a77920",
+          "#cb9c49",
+          "#ebc27e",
+          "#ffecce"
+        ]
+      },
+      "danger": {
+        "role": "status",
+        "displayName": "Burnt Sienna",
+        "canonical": "#ac4c2d",
+        "tonalRamp": [
+          "#1b0400",
+          "#441102",
+          "#732305",
+          "#9e3f20",
+          "#c46243",
+          "#eb8565",
+          "#ffb59d",
+          "#ffe9e2"
+        ]
+      },
+      "tip": {
+        "role": "neutral",
+        "displayName": "Petrol Graphite",
+        "canonical": "#16313a",
+        "tonalRamp": [
+          "#060c0f",
+          "#19282d",
+          "#2e464e",
+          "#4a6670",
+          "#6b8892",
+          "#8dabb6",
+          "#b4ced8",
+          "#e0f2f9"
+        ]
+      },
+      "on-tip": {
+        "role": "neutral",
+        "displayName": "On Tip",
+        "canonical": "#f4f4f6",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#252526",
+          "#424243",
+          "#616163",
+          "#828284",
+          "#a5a5a7",
+          "#c9c9cb",
+          "#eeeef0"
+        ]
+      },
+      "page-dark": {
+        "role": "neutral",
+        "displayName": "Bone Ground (dark theme)",
+        "canonical": "#101413",
+        "tonalRamp": [
+          "#080c0b",
+          "#222625",
+          "#3e4342",
+          "#5d6261",
+          "#7e8482",
+          "#a1a6a5",
+          "#c5cbc9",
+          "#eaf0ee"
+        ]
+      },
+      "card-dark": {
+        "role": "neutral",
+        "displayName": "Card White (dark theme)",
+        "canonical": "#171c1b",
+        "tonalRamp": [
+          "#080c0b",
+          "#212625",
+          "#3e4342",
+          "#5d6361",
+          "#7e8483",
+          "#a0a7a5",
+          "#c4cbc9",
+          "#e9f0ef"
+        ]
+      },
+      "soft-dark": {
+        "role": "neutral",
+        "displayName": "Soft Bone (dark theme)",
+        "canonical": "#202625",
+        "tonalRamp": [
+          "#070c0c",
+          "#202625",
+          "#3d4442",
+          "#5c6362",
+          "#7d8483",
+          "#9fa7a6",
+          "#c3cbca",
+          "#e8f0ef"
+        ]
+      },
+      "sunken-dark": {
+        "role": "neutral",
+        "displayName": "Sunken Bone (dark theme)",
+        "canonical": "#141918",
+        "tonalRamp": [
+          "#080c0b",
+          "#212625",
+          "#3e4342",
+          "#5d6361",
+          "#7d8483",
+          "#a0a7a5",
+          "#c4cbc9",
+          "#e9f0ef"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Graphite Ink (dark theme)",
+        "canonical": "#eaeeec",
+        "tonalRamp": [
+          "#090c0b",
+          "#232624",
+          "#404341",
+          "#5f6260",
+          "#808381",
+          "#a2a6a4",
+          "#c6cac8",
+          "#ebefed"
+        ]
+      },
+      "ink-2-dark": {
+        "role": "neutral",
+        "displayName": "Graphite Two (dark theme)",
+        "canonical": "#c2c9c6",
+        "tonalRamp": [
+          "#080c0a",
+          "#212624",
+          "#3e4441",
+          "#5d6360",
+          "#7e8481",
+          "#a0a7a4",
+          "#c4cbc8",
+          "#e9f0ed"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Warm Muted (dark theme)",
+        "canonical": "#8e9895",
+        "tonalRamp": [
+          "#060d0b",
+          "#1f2725",
+          "#3b4442",
+          "#5a6461",
+          "#7b8582",
+          "#9da8a5",
+          "#c1ccc9",
+          "#e6f1ee"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Hairline (dark theme)",
+        "canonical": "rgb(255 255 255 / 0.08)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "line-strong-dark": {
+        "role": "neutral",
+        "displayName": "Strong Hairline (dark theme)",
+        "canonical": "rgb(255 255 255 / 0.16)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "accent-dark": {
+        "role": "primary",
+        "displayName": "Petrol (dark theme)",
+        "canonical": "#63b3c4",
+        "tonalRamp": [
+          "#000e12",
+          "#012b32",
+          "#024b57",
+          "#106d7d",
+          "#3e8fa0",
+          "#63b3c4",
+          "#93d6e4",
+          "#d2f6fe"
+        ]
+      },
+      "accent-ink-dark": {
+        "role": "primary",
+        "displayName": "Deep Petrol (dark theme)",
+        "canonical": "#8fcad7",
+        "tonalRamp": [
+          "#020e11",
+          "#092a30",
+          "#164a54",
+          "#306b77",
+          "#538d99",
+          "#76b0bd",
+          "#a1d3de",
+          "#d4f6fd"
+        ]
+      },
+      "on-accent-dark": {
+        "role": "primary",
+        "displayName": "On Petrol (dark theme)",
+        "canonical": "#0b1a1d",
+        "tonalRamp": [
+          "#080c0d",
+          "#1e2729",
+          "#374548",
+          "#546568",
+          "#74868a",
+          "#97a9ad",
+          "#bccdd0",
+          "#e6f1f3"
+        ]
+      },
+      "rail-dark": {
+        "role": "neutral",
+        "displayName": "Night Petrol Rail (dark theme)",
+        "canonical": "#0a1a1e",
+        "tonalRamp": [
+          "#080c0d",
+          "#1d2729",
+          "#364549",
+          "#53656a",
+          "#73868b",
+          "#96a9ae",
+          "#bccdd1",
+          "#e5f1f4"
+        ]
+      },
+      "rail-muted-dark": {
+        "role": "neutral",
+        "displayName": "Rail Muted (dark theme)",
+        "canonical": "#8ea3a5",
+        "tonalRamp": [
+          "#070c0d",
+          "#1d2728",
+          "#354547",
+          "#526567",
+          "#728789",
+          "#95aaac",
+          "#bbcdcf",
+          "#e4f1f3"
+        ]
+      },
+      "band-short-dark": {
+        "role": "status",
+        "displayName": "Viridian (dark theme)",
+        "canonical": "#3fa484",
+        "tonalRamp": [
+          "#000f09",
+          "#002d20",
+          "#084e3b",
+          "#0c7258",
+          "#2e9677",
+          "#58ba99",
+          "#8cdcbf",
+          "#c7fde7"
+        ]
+      },
+      "band-review-dark": {
+        "role": "status",
+        "displayName": "Cobalt (dark theme)",
+        "canonical": "#5883c0",
+        "tonalRamp": [
+          "#030b1a",
+          "#0f2544",
+          "#1f4272",
+          "#38629c",
+          "#5984c1",
+          "#7aa7e6",
+          "#a8ccfe",
+          "#e5effe"
+        ]
+      },
+      "band-hold-dark": {
+        "role": "status",
+        "displayName": "Yellow Ochre (dark theme)",
+        "canonical": "#b68525",
+        "tonalRamp": [
+          "#120900",
+          "#322202",
+          "#573d05",
+          "#7f5908",
+          "#a9780f",
+          "#cd9b40",
+          "#edc279",
+          "#ffeccd"
+        ]
+      },
+      "band-rejected-dark": {
+        "role": "status",
+        "displayName": "Stone (dark theme)",
+        "canonical": "#6c6863",
+        "tonalRamp": [
+          "#0e0b07",
+          "#282420",
+          "#45413d",
+          "#64605c",
+          "#86827c",
+          "#a9a49f",
+          "#cdc8c3",
+          "#f2eee8"
+        ]
+      },
+      "band-dup-dark": {
+        "role": "status",
+        "displayName": "Mulberry (dark theme)",
+        "canonical": "#9b5375",
+        "tonalRamp": [
+          "#16050d",
+          "#3b1629",
+          "#652a48",
+          "#8d4668",
+          "#b16789",
+          "#d789ac",
+          "#f7b2d0",
+          "#ffe7f1"
+        ]
+      },
+      "st-short-dark": {
+        "role": "status",
+        "displayName": "Viridian Text (dark theme)",
+        "canonical": "#9ae1c6",
+        "tonalRamp": [
+          "#010f09",
+          "#042d21",
+          "#0b4e3b",
+          "#287059",
+          "#4c927a",
+          "#70b69c",
+          "#9dd8c1",
+          "#d1f9e9"
+        ]
+      },
+      "st-review-dark": {
+        "role": "status",
+        "displayName": "Cobalt Text (dark theme)",
+        "canonical": "#b1d0fc",
+        "tonalRamp": [
+          "#050b15",
+          "#17263a",
+          "#2c4363",
+          "#476289",
+          "#6784ac",
+          "#89a7d1",
+          "#b1cbf0",
+          "#e5efff"
+        ]
+      },
+      "st-hold-dark": {
+        "role": "status",
+        "displayName": "Yellow Ochre Text (dark theme)",
+        "canonical": "#f4ce90",
+        "tonalRamp": [
+          "#120900",
+          "#322202",
+          "#573c05",
+          "#7c5b1b",
+          "#9f7c3f",
+          "#c39f62",
+          "#e4c491",
+          "#ffeccd"
+        ]
+      },
+      "st-rejected-dark": {
+        "role": "status",
+        "displayName": "Stone Text (dark theme)",
+        "canonical": "#cbc6c0",
+        "tonalRamp": [
+          "#0e0b07",
+          "#282420",
+          "#45413c",
+          "#65605b",
+          "#86817c",
+          "#a9a49e",
+          "#cdc8c2",
+          "#f3eee7"
+        ]
+      },
+      "st-dup-dark": {
+        "role": "status",
+        "displayName": "Mulberry Text (dark theme)",
+        "canonical": "#f5bdd4",
+        "tonalRamp": [
+          "#13070c",
+          "#351c27",
+          "#5b3445",
+          "#805065",
+          "#a47187",
+          "#c993a9",
+          "#e9bacd",
+          "#ffe7f0"
+        ]
+      },
+      "st-danger-dark": {
+        "role": "status",
+        "displayName": "Burnt Sienna Text (dark theme)",
+        "canonical": "#ffb7a0",
+        "tonalRamp": [
+          "#160603",
+          "#3b1a10",
+          "#653120",
+          "#8c4e3a",
+          "#b16f5a",
+          "#d6917b",
+          "#f6b9a5",
+          "#ffe9e2"
+        ]
+      },
+      "tint-short-dark": {
+        "role": "status",
+        "displayName": "Viridian Tint (dark theme)",
+        "canonical": "#112a21",
+        "tonalRamp": [
+          "#060d0a",
+          "#1a2923",
+          "#31483f",
+          "#4e685d",
+          "#6e8a7e",
+          "#90ada1",
+          "#b7d0c5",
+          "#e2f3ec"
+        ]
+      },
+      "tint-review-dark": {
+        "role": "status",
+        "displayName": "Cobalt Tint (dark theme)",
+        "canonical": "#182538",
+        "tonalRamp": [
+          "#080b11",
+          "#1e2631",
+          "#364355",
+          "#536278",
+          "#74849b",
+          "#96a6bf",
+          "#bccae0",
+          "#e5efff"
+        ]
+      },
+      "tint-hold-dark": {
+        "role": "status",
+        "displayName": "Yellow Ochre Tint (dark theme)",
+        "canonical": "#2f2411",
+        "tonalRamp": [
+          "#0e0b06",
+          "#2b2419",
+          "#4b402f",
+          "#6c5f4b",
+          "#8e806b",
+          "#b1a38d",
+          "#d4c7b4",
+          "#f6eddf"
+        ]
+      },
+      "tint-rejected-dark": {
+        "role": "status",
+        "displayName": "Stone Tint (dark theme)",
+        "canonical": "#262421",
+        "tonalRamp": [
+          "#0d0b08",
+          "#272522",
+          "#44423e",
+          "#63615d",
+          "#84827e",
+          "#a7a5a1",
+          "#cbc9c5",
+          "#f1eeea"
+        ]
+      },
+      "tint-dup-dark": {
+        "role": "status",
+        "displayName": "Mulberry Tint (dark theme)",
+        "canonical": "#321d26",
+        "tonalRamp": [
+          "#0f090c",
+          "#2e2126",
+          "#503b44",
+          "#725963",
+          "#947a84",
+          "#b89ca7",
+          "#dac1cb",
+          "#fbe9f0"
+        ]
+      },
+      "tint-danger-dark": {
+        "role": "status",
+        "displayName": "Burnt Sienna Tint (dark theme)",
+        "canonical": "#351d16",
+        "tonalRamp": [
+          "#100907",
+          "#30211c",
+          "#533c35",
+          "#765a51",
+          "#997a71",
+          "#bd9d94",
+          "#dec2ba",
+          "#fee9e4"
+        ]
+      },
+      "edge-short-dark": {
+        "role": "status",
+        "displayName": "Viridian Edge (dark theme)",
+        "canonical": "#154738",
+        "tonalRamp": [
+          "#030e0a",
+          "#102b22",
+          "#224b3d",
+          "#3c6c5c",
+          "#5d8e7d",
+          "#80b29f",
+          "#a9d4c4",
+          "#d9f7eb"
+        ]
+      },
+      "edge-review-dark": {
+        "role": "status",
+        "displayName": "Cobalt Edge (dark theme)",
+        "canonical": "#273f60",
+        "tonalRamp": [
+          "#060b15",
+          "#182638",
+          "#2e4360",
+          "#496386",
+          "#6984a9",
+          "#8ba7ce",
+          "#b3cbed",
+          "#e5f0ff"
+        ]
+      },
+      "edge-hold-dark": {
+        "role": "status",
+        "displayName": "Yellow Ochre Edge (dark theme)",
+        "canonical": "#523d18",
+        "tonalRamp": [
+          "#100a03",
+          "#2f230f",
+          "#513f1f",
+          "#745d39",
+          "#967e59",
+          "#b9a17a",
+          "#dbc6a4",
+          "#fbecd5"
+        ]
+      },
+      "edge-rejected-dark": {
+        "role": "status",
+        "displayName": "Stone Edge (dark theme)",
+        "canonical": "#403d39",
+        "tonalRamp": [
+          "#0d0b08",
+          "#272521",
+          "#44413d",
+          "#64615c",
+          "#85827d",
+          "#a8a4a0",
+          "#ccc8c4",
+          "#f2eee9"
+        ]
+      },
+      "edge-dup-dark": {
+        "role": "status",
+        "displayName": "Mulberry Edge (dark theme)",
+        "canonical": "#583243",
+        "tonalRamp": [
+          "#12080c",
+          "#331d27",
+          "#583645",
+          "#7c5365",
+          "#9f7486",
+          "#c496a9",
+          "#e5bccc",
+          "#ffe7f0"
+        ]
+      },
+      "edge-danger-dark": {
+        "role": "status",
+        "displayName": "Burnt Sienna Edge (dark theme)",
+        "canonical": "#603325",
+        "tonalRamp": [
+          "#140805",
+          "#371d15",
+          "#5e362a",
+          "#835344",
+          "#a77464",
+          "#cc9686",
+          "#ecbdae",
+          "#ffe9e2"
+        ]
+      },
+      "gl-short-dark": {
+        "role": "status",
+        "displayName": "Viridian Glyph (dark theme)",
+        "canonical": "#52bb99",
+        "tonalRamp": [
+          "#000f09",
+          "#002d21",
+          "#014e3b",
+          "#0f7258",
+          "#269777",
+          "#52bb99",
+          "#89ddbf",
+          "#c5fde7"
+        ]
+      },
+      "gl-review-dark": {
+        "role": "status",
+        "displayName": "Cobalt Glyph (dark theme)",
+        "canonical": "#76a0dc",
+        "tonalRamp": [
+          "#030b1a",
+          "#102542",
+          "#214270",
+          "#3b6299",
+          "#5b84be",
+          "#7da7e3",
+          "#a8cbfe",
+          "#e5effe"
+        ]
+      },
+      "gl-hold-dark": {
+        "role": "status",
+        "displayName": "Yellow Ochre Glyph (dark theme)",
+        "canonical": "#daa850",
+        "tonalRamp": [
+          "#120900",
+          "#332100",
+          "#583c01",
+          "#7f5a0c",
+          "#a87814",
+          "#cd9c43",
+          "#edc27a",
+          "#ffecce"
+        ]
+      },
+      "gl-rejected-dark": {
+        "role": "status",
+        "displayName": "Stone Glyph (dark theme)",
+        "canonical": "#908b86",
+        "tonalRamp": [
+          "#0e0a07",
+          "#282420",
+          "#45413d",
+          "#65605c",
+          "#86817c",
+          "#a9a49f",
+          "#cdc8c3",
+          "#f3ede8"
+        ]
+      },
+      "gl-dup-dark": {
+        "role": "status",
+        "displayName": "Mulberry Glyph (dark theme)",
+        "canonical": "#d183a5",
+        "tonalRamp": [
+          "#16050d",
+          "#3c1628",
+          "#662a47",
+          "#8d4667",
+          "#b26788",
+          "#d889ab",
+          "#f7b2cf",
+          "#ffe7f0"
+        ]
+      },
+      "ok-dark": {
+        "role": "status",
+        "displayName": "Pass Signal (dark theme)",
+        "canonical": "#3fa484",
+        "tonalRamp": [
+          "#000f09",
+          "#002d20",
+          "#084e3b",
+          "#0c7258",
+          "#2e9677",
+          "#58ba99",
+          "#8cdcbf",
+          "#c7fde7"
+        ]
+      },
+      "warn-dark": {
+        "role": "status",
+        "displayName": "Attention Signal (dark theme)",
+        "canonical": "#b68525",
+        "tonalRamp": [
+          "#120900",
+          "#322202",
+          "#573d05",
+          "#7f5908",
+          "#a9780f",
+          "#cd9b40",
+          "#edc279",
+          "#ffeccd"
+        ]
+      },
+      "danger-dark": {
+        "role": "status",
+        "displayName": "Burnt Sienna (dark theme)",
+        "canonical": "#e07655",
+        "tonalRamp": [
+          "#1b0300",
+          "#461000",
+          "#752100",
+          "#a13d1b",
+          "#c7603f",
+          "#ee8362",
+          "#feb59e",
+          "#ffe9e3"
+        ]
+      },
+      "tip-dark": {
+        "role": "neutral",
+        "displayName": "Petrol Graphite (dark theme)",
+        "canonical": "#24363b",
+        "tonalRamp": [
+          "#070c0e",
+          "#1d272a",
+          "#35454a",
+          "#52656b",
+          "#72868c",
+          "#94a9af",
+          "#bbcdd2",
+          "#e4f1f5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display numeral",
+        "purpose": "The overall fit score in the candidate drawer. Mona Sans with proportional figures; the largest type on any screen."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "KPI ribbon values with a small muted unit, proportional figures; 22px under 560px. The comparison's overall fit is a 26px 650 cut."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Topbar page title; the drawer's candidate name is the 600 cut. The largest UI text."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, panel and run headings; dialog and comparison titles step up to 16px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base text and form inputs, lining proportional figures throughout."
+      },
+      "item": {
+        "displayName": "Item",
+        "purpose": "Rail navigation, option and provider titles."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Buttons, select buttons, segmented controls."
+      },
+      "table": {
+        "displayName": "Table",
+        "purpose": "Table cells, dense lists, menu items and toasts."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "KPI labels, field labels, toolbar, card and comparison meta, comparison row labels."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Chips and column headers."
+      },
+      "badge": {
+        "displayName": "Badge",
+        "purpose": "Stage tags and status badges: Mona Sans 580 at font-stretch 94% (wdth axis 75..125 loaded), +0.004em."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Sub-lines, hints and tooltips."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Proportional lining figures, right-aligned, for numbers that line up or tick: row fit numerals, column scores, counts, latencies, run stats, axis ticks, timestamps, deltas, comparison values. Live counters hold a min-width (1.3ch stage-tab counts, 3ch run stats)."
+      },
+      "machine": {
+        "displayName": "Machine",
+        "purpose": "Fragment Mono for machine strings only: hashes, file paths, event keys, the run log, environment variable names, key caps."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pop",
+        "value": "0 12px 32px -8px rgb(15 42 49 / 0.24), 0 0 0 1px rgb(28 27 25 / 0.08)",
+        "purpose": "Menus, the confirm dialog and the comparison dialog (light). Petrol-tinted; the 1px ring stands in for a border."
+      },
+      {
+        "name": "pop-dark",
+        "value": "0 16px 40px -8px rgb(0 0 0 / 0.6), 0 0 0 1px rgb(255 255 255 / 0.08)",
+        "purpose": "Menus and dialogs (dark)."
+      },
+      {
+        "name": "drawer",
+        "value": "-24px 0 48px -24px rgb(15 42 49 / 0.32)",
+        "purpose": "Candidate drawer, cast leftward onto the page (light)."
+      },
+      {
+        "name": "drawer-dark",
+        "value": "-24px 0 48px -16px rgb(0 0 0 / 0.6)",
+        "purpose": "Candidate drawer (dark)."
+      },
+      {
+        "name": "rail-sheet",
+        "value": "24px 0 48px -24px rgb(0 0 0 / 0.5)",
+        "purpose": "Off-canvas rail under 860px."
+      },
+      {
+        "name": "tooltip",
+        "value": "0 6px 16px -6px rgb(0 0 0 / 0.35)",
+        "purpose": "Tooltips."
+      },
+      {
+        "name": "toast",
+        "value": "0 12px 28px -10px rgb(0 0 0 / 0.45)",
+        "purpose": "Toasts."
+      },
+      {
+        "name": "segment-lift",
+        "value": "0 1px 2px rgb(0 0 0 / 0.08), 0 0 0 1px var(--line)",
+        "purpose": "Selected segment of the mode switch and stage tabs; the only in-plane shadow."
+      },
+      {
+        "name": "card-halo",
+        "value": "0 0 0 2px var(--card)",
+        "purpose": "Card-coloured ring around ruler marks and distribution dots."
+      },
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent)",
+        "purpose": "Text input and search focus, with the border turning petrol. Range thumbs use 4px at 25%."
+      },
+      {
+        "name": "focus-outline",
+        "value": "outline: 2px solid var(--accent); outline-offset: 2px",
+        "purpose": "Global :focus-visible treatment (an outline, listed for completeness). Brass inside the rail."
+      },
+      {
+        "name": "scrims",
+        "value": "rgb(10 11 14 / 0.28) drawer; 0.35 off-canvas rail; 0.4 dialogs",
+        "purpose": "Backdrops under floating surfaces (backgrounds, not shadows)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Shared ease-out for slides, progress, dots and weight bars."
+      },
+      {
+        "name": "row",
+        "value": "120ms",
+        "purpose": "Table row and option hover."
+      },
+      {
+        "name": "control",
+        "value": "150ms",
+        "purpose": "Buttons, inputs, segmented controls, nav items, dot scale, stale fade."
+      },
+      {
+        "name": "scrim",
+        "value": "200ms",
+        "purpose": "Drawer scrim fade, pipeline step and weight changes."
+      },
+      {
+        "name": "toast-in",
+        "value": "220ms",
+        "purpose": "Toast rises 6px and fades in."
+      },
+      {
+        "name": "rail-slide",
+        "value": "240ms",
+        "purpose": "Off-canvas rail slide under 860px."
+      },
+      {
+        "name": "progress",
+        "value": "250ms",
+        "purpose": "Batch progress bar width."
+      },
+      {
+        "name": "drawer-slide",
+        "value": "260ms",
+        "purpose": "Candidate drawer slide-in."
+      },
+      {
+        "name": "breathe",
+        "value": "1.6s ease-in-out infinite (1s for the active pipeline step)",
+        "purpose": "Live-scan dot and active step pulse to 35% opacity."
+      },
+      {
+        "name": "spin",
+        "value": "0.7s linear infinite",
+        "purpose": "Busy spinner."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "prefers-reduced-motion collapses every animation and transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "columns-md",
+        "value": "1360px",
+        "purpose": "max-width: Impact and Education columns drop; scan configuration narrows to 300-360px."
+      },
+      {
+        "name": "columns-lg",
+        "value": "1280px",
+        "purpose": "max-width: Critical skills column drops; above it the table header sticks under the topbar."
+      },
+      {
+        "name": "stack",
+        "value": "1120px",
+        "purpose": "max-width: panels and split views stack; KPI ribbon and run stats go three across; compact ruler hidden in rows."
+      },
+      {
+        "name": "rail",
+        "value": "860px",
+        "purpose": "max-width: rail becomes an off-canvas sheet; 16px gutters; Dedup column drops."
+      },
+      {
+        "name": "phone",
+        "value": "560px",
+        "purpose": "max-width: two-across stats, numeric columns and avatars drop, short badge labels."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled petrol action, reserved for the step that moves the story forward in its region.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m7 4 13 8-13 8z\"/></svg>Run batch scan</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; gap:7px; height:32px; padding:0 12px; border-radius:var(--r-ctl, 8px); border:1px solid var(--accent, #145a6b); background:var(--accent, #145a6b); color:var(--on-accent, #ffffff); font:500 13px/1 var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); white-space:nowrap; cursor:pointer; transition:background .15s, border-color .15s; } .ds-btn-primary .ds-ic { width:16px; height:16px; flex:none; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; } .ds-btn-primary:hover { background:color-mix(in srgb, var(--accent, #145a6b) 88%, #000); } .ds-btn-primary:active { transform:translateY(0.5px); } .ds-btn-primary:focus-visible { outline:2px solid var(--accent, #145a6b); outline-offset:2px; }"
+    },
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Bordered card-white button for every secondary action; ghost and danger variants share its frame.",
+      "html": "<button class=\"ds-btn\" type=\"button\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/><path d=\"M12 15V3\"/></svg>Export</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; gap:7px; height:32px; padding:0 12px; border-radius:var(--r-ctl, 8px); border:1px solid var(--line-strong, rgb(28 27 25 / 0.18)); background:var(--card, #ffffff); color:var(--ink, #1c1b19); font:500 13px/1 var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); white-space:nowrap; cursor:pointer; transition:background .15s, border-color .15s; } .ds-btn .ds-ic { width:16px; height:16px; flex:none; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; } .ds-btn:hover { background:var(--soft, #eeede8); } .ds-btn:active { transform:translateY(0.5px); } .ds-btn:focus-visible { outline:2px solid var(--accent, #145a6b); outline-offset:2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "34px field on card white with a strong hairline; focus turns the border petrol with a 3px soft ring.",
+      "html": "<label class=\"ds-field\"><span>Job title</span><input class=\"ds-input\" type=\"text\" placeholder=\"Senior Python Backend Engineer\"></label>",
+      "css": ".ds-field { display:grid; gap:6px; font-family:var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); } .ds-field > span { font-size:12.5px; font-weight:500; color:var(--ink-2, #45423c); } .ds-input { width:100%; height:34px; padding:0 10px; border-radius:var(--r-ctl, 8px); border:1px solid var(--line-strong, rgb(28 27 25 / 0.18)); background:var(--card, #ffffff); color:var(--ink, #1c1b19); font:400 14px/1.45 var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); caret-color:var(--accent, #145a6b); transition:border-color .15s, box-shadow .15s; } .ds-input::placeholder { color:color-mix(in srgb, var(--muted, #68645c) 85%, transparent); } .ds-input:focus, .ds-input:focus-visible { outline:none; border-color:var(--accent, #145a6b); box-shadow:0 0 0 3px color-mix(in srgb, var(--accent, #145a6b) 18%, transparent); }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "custom",
+      "refersTo": "segmented-track",
+      "description": "Soft bone track with one lifted white segment: the Demo / Live workspace switch and the stage filter tabs.",
+      "html": "<div class=\"ds-seg\" role=\"radiogroup\" aria-label=\"Workspace mode\"><button type=\"button\" role=\"radio\" aria-checked=\"true\">Demo</button><button type=\"button\" role=\"radio\" aria-checked=\"false\">Live</button></div>",
+      "css": ".ds-seg { display:inline-flex; padding:3px; background:var(--soft, #eeede8); border:1px solid var(--line, rgb(28 27 25 / 0.10)); border-radius:9px; } .ds-seg button { border:0; background:transparent; height:26px; padding:0 14px; border-radius:6px; font:500 13px/1 var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); color:var(--muted, #68645c); cursor:pointer; transition:background .15s, color .15s; } .ds-seg button:hover { color:var(--ink, #1c1b19); } .ds-seg button[aria-checked=\"true\"] { background:var(--card, #ffffff); color:var(--ink, #1c1b19); box-shadow:0 1px 2px rgb(0 0 0 / 0.08), 0 0 0 1px var(--line, rgb(28 27 25 / 0.10)); } .ds-seg button:focus-visible { outline:2px solid var(--accent, #145a6b); outline-offset:2px; }"
+    },
+    {
+      "name": "Rail Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Night-petrol rail, dark in both themes: brass brand mark, muted items that lift on hover, the current page filled with a brass icon, a Rail OK live dot.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Primary\"><div class=\"ds-brand\"><span class=\"ds-mark\" aria-hidden=\"true\"><svg viewBox=\"0 0 32 32\"><path d=\"M8 10h16M11 16h10M14 22h4\"/></svg></span><span class=\"ds-brand-text\"><strong>Resume Intelligence</strong><span>Keka ATS</span></span></div><a href=\"#\" aria-current=\"page\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/></svg><span>Candidates</span><span class=\"ds-count\">10</span></a><a href=\"#\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 2 10 5-10 5L2 7z\"/><path d=\"m2 17 10 5 10-5\"/><path d=\"m2 12 10 5 10-5\"/></svg><span>Batch scan</span><span class=\"ds-live\"></span></a><a href=\"#\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\"/></svg><span>Job descriptions</span></a></nav>",
+      "css": ".ds-rail { display:flex; flex-direction:column; gap:2px; width:232px; padding:0 8px 12px; background:var(--rail, #0f2a31); color:var(--rail-ink, #e4ecec); border-radius:8px; font-family:var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); } .ds-brand { display:flex; align-items:center; gap:10px; margin:0 -8px 10px; padding:18px 16px 16px; border-bottom:1px solid var(--rail-line, rgb(255 255 255 / 0.09)); } .ds-mark { width:28px; height:28px; border-radius:7px; background:var(--brass, #c9a24a); display:grid; place-items:center; flex:none; } .ds-mark svg { width:20px; height:20px; fill:none; stroke:#0f2a31; stroke-width:3; stroke-linecap:round; } .ds-brand-text { display:flex; flex-direction:column; line-height:1.2; } .ds-brand-text strong { font-size:13.5px; font-weight:600; letter-spacing:-0.01em; } .ds-brand-text span { font-size:12px; color:var(--rail-muted, #9bb0b2); } .ds-rail a { display:flex; align-items:center; gap:10px; height:34px; padding:0 10px; border-radius:7px; color:var(--rail-muted, #9bb0b2); text-decoration:none; font-size:13.5px; font-weight:500; transition:background .15s, color .15s; } .ds-rail .ds-ic { width:16px; height:16px; flex:none; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; } .ds-rail a:hover { background:var(--rail-hover, rgb(255 255 255 / 0.06)); color:var(--rail-ink, #e4ecec); } .ds-rail a[aria-current=\"page\"] { background:var(--rail-active, rgb(255 255 255 / 0.11)); color:#ffffff; } .ds-rail a[aria-current=\"page\"] .ds-ic { color:var(--brass, #c9a24a); } .ds-rail a:focus-visible { outline:2px solid var(--brass, #c9a24a); outline-offset:2px; } .ds-rail .ds-count { margin-left:auto; font:400 11.5px/1 var(--font-num, 'Mona Sans', ui-sans-serif, system-ui, sans-serif); font-variant-numeric:proportional-nums lining-nums; color:var(--rail-muted, #9bb0b2); } .ds-rail .ds-live { margin-left:auto; width:7px; height:7px; border-radius:50%; background:var(--rail-ok, #6ac6a6); }"
+    },
+    {
+      "name": "Stage Badges",
+      "kind": "chip",
+      "refersTo": "badge-shortlisted",
+      "description": "Each stage said three ways: pigment tint with a 1px inset edge, a drawn 12px glyph (solid discs for the decisions, Harvey balls for the open stages, a copy mark for duplicates) and its label in Mona Sans 580 at 94% width. Stone is deliberately recessive.",
+      "html": "<div class=\"ds-badges\"><span class=\"ds-badge ds-st-short\"><svg class=\"ds-sg\" viewBox=\"0 0 12 12\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"6\" cy=\"6\" r=\"5.85\" fill=\"currentColor\"/><path class=\"ds-ko\" d=\"M3.55 6.15 5.25 7.8 8.45 4.55\" fill=\"none\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Shortlisted</span><span class=\"ds-badge ds-st-review\"><svg class=\"ds-sg\" viewBox=\"0 0 12 12\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"6\" cy=\"6\" r=\"5.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M6 6V3.05A2.95 2.95 0 1 1 3.05 6Z\" fill=\"currentColor\"/></svg>Technical Review</span><span class=\"ds-badge ds-st-hold\"><svg class=\"ds-sg\" viewBox=\"0 0 12 12\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"6\" cy=\"6\" r=\"5.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M6 3.05A2.95 2.95 0 0 1 6 8.95Z\" fill=\"currentColor\"/></svg>Hold / Borderline</span><span class=\"ds-badge ds-st-rejected\"><svg class=\"ds-sg\" viewBox=\"0 0 12 12\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"6\" cy=\"6\" r=\"5.85\" fill=\"currentColor\"/><path class=\"ds-ko\" d=\"M4.15 4.15 7.85 7.85M7.85 4.15 4.15 7.85\" fill=\"none\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>Rejected</span><span class=\"ds-badge ds-st-dup\"><svg class=\"ds-sg\" viewBox=\"0 0 12 12\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M2.9 7.9h-.5A1.5 1.5 0 0 1 .9 6.4v-4A1.5 1.5 0 0 1 2.4.9h4a1.5 1.5 0 0 1 1.5 1.5v.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><rect x=\"4.1\" y=\"4.1\" width=\"7\" height=\"7\" rx=\"1.6\" fill=\"currentColor\"/></svg>Duplicate Flagged</span></div>",
+      "css": ".ds-badges { display:flex; flex-wrap:wrap; gap:8px; } .ds-badge { --b-text:var(--ink-2, #45423c); --b-tint:var(--soft, #eeede8); --b-edge:var(--line, rgb(28 27 25 / 0.10)); --b-gl:var(--muted, #68645c); display:inline-flex; align-items:center; gap:6px; height:22px; padding:0 8px 0 6px; border-radius:5px; border:0; font:580 12px/1 var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); font-stretch:94%; letter-spacing:0.004em; white-space:nowrap; color:var(--b-text); background:var(--b-tint); box-shadow:inset 0 0 0 1px var(--b-edge); transition:box-shadow .15s; } .ds-sg { display:block; width:12px; height:12px; flex:none; overflow:visible; color:var(--b-gl); } .ds-sg .ds-ko { stroke:var(--card, #ffffff); } .ds-st-short { --b-text:var(--st-short, #0f5642); --b-tint:var(--tint-short, #e7f6ef); --b-edge:var(--edge-short, #bedecf); --b-gl:var(--gl-short, #1a886a); } .ds-st-review { --b-text:var(--st-review, #23457b); --b-tint:var(--tint-review, #e9f1fe); --b-edge:var(--edge-review, #c2d5f2); --b-gl:var(--gl-review, #3660a3); } .ds-st-hold { --b-text:var(--st-hold, #6d4f19); --b-tint:var(--tint-hold, #fff1da); --b-edge:var(--edge-hold, #f0d2a3); --b-gl:var(--gl-hold, #ab7d25); } .ds-st-rejected { --b-text:var(--st-rejected, #56524b); --b-tint:var(--tint-rejected, #f0ede9); --b-edge:var(--edge-rejected, #d9d4ce); --b-gl:var(--gl-rejected, #847f78); } .ds-st-dup { --b-text:var(--st-dup, #6f2d4c); --b-tint:var(--tint-dup, #f9edf2); --b-edge:var(--edge-dup, #e9cdd7); --b-gl:var(--gl-dup, #823a5c); } .ds-badge:hover { box-shadow:inset 0 0 0 1px var(--b-gl); }"
+    },
+    {
+      "name": "Skill Chips",
+      "kind": "chip",
+      "refersTo": "chip-match",
+      "description": "Evidence chips in the tag families: check for a viridian match (dashed when listed but not shown in work), cross for a missing core (yellow ochre) or critical (burnt sienna) skill, petrol for a nice-to-have.",
+      "html": "<div class=\"ds-chips\"><span class=\"ds-chip ds-match\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Python</span><span class=\"ds-chip ds-match ds-listed\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Kubernetes</span><span class=\"ds-chip ds-gap\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>Redis</span><span class=\"ds-chip ds-miss\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>PostgreSQL</span><span class=\"ds-chip ds-bonus\">GraphQL</span><span class=\"ds-chip\">Terraform</span></div>",
+      "css": ".ds-chips { display:flex; flex-wrap:wrap; gap:6px; align-items:center; } .ds-chip { display:inline-flex; align-items:center; gap:4px; height:24px; padding:0 8px; border-radius:6px; font:500 12px/1 var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); white-space:nowrap; background:var(--soft, #eeede8); border:1px solid var(--line, rgb(28 27 25 / 0.10)); color:var(--ink-2, #45423c); } .ds-chip .ds-ic { width:14px; height:14px; flex:none; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; } .ds-match { background:var(--tint-short, #e7f6ef); border-color:var(--edge-short, #bedecf); color:var(--st-short, #0f5642); } .ds-listed { border-style:dashed; } .ds-gap { background:var(--tint-hold, #fff1da); border-color:var(--edge-hold, #f0d2a3); color:var(--st-hold, #6d4f19); } .ds-miss { background:var(--tint-danger, #ffede7); border-color:var(--edge-danger, #f4cbbf); color:var(--st-danger, #87381f); } .ds-bonus { background:color-mix(in srgb, var(--accent, #145a6b) 8%, var(--card, #ffffff)); border-color:color-mix(in srgb, var(--accent, #145a6b) 22%, transparent); color:var(--accent-ink, #0f4c5b); }"
+    },
+    {
+      "name": "KPI Ribbon",
+      "kind": "card",
+      "refersTo": "kpi-ribbon",
+      "description": "One card split by hairlines into equal cells (five in production): label, Mona Sans metric in proportional figures with a unit, caption with a delta. An owner-requested decision, not a general card rule.",
+      "html": "<div class=\"ds-kpis\"><div class=\"ds-kpi\"><div class=\"ds-kpi-label\">Total scanned</div><div class=\"ds-kpi-value\">10</div><div class=\"ds-kpi-sub\"><span class=\"ds-delta ds-up\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 11 6-6 6 6\"/><path d=\"M12 19V5\"/></svg>2</span>vs previous batch</div></div><div class=\"ds-kpi\"><div class=\"ds-kpi-label\">Duplicates blocked</div><div class=\"ds-kpi-value\">2</div><div class=\"ds-kpi-sub\">20% of intake</div></div><div class=\"ds-kpi\"><div class=\"ds-kpi-label\">Avg match score</div><div class=\"ds-kpi-value\">64<small>/100</small></div><div class=\"ds-kpi-sub\">median 66</div></div></div>",
+      "css": ".ds-kpis { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); background:var(--card, #ffffff); border:1px solid var(--line, rgb(28 27 25 / 0.10)); border-radius:var(--r-card, 12px); font-family:var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); color:var(--ink, #1c1b19); } .ds-kpi { display:grid; gap:6px; padding:16px 18px 15px; border-right:1px solid var(--line, rgb(28 27 25 / 0.10)); min-width:0; } .ds-kpi:last-child { border-right:0; } .ds-kpi:focus-visible { outline:2px solid var(--accent, #145a6b); outline-offset:2px; border-radius:4px; } .ds-kpi-label { font-size:12.5px; font-weight:500; color:var(--muted, #68645c); } .ds-kpi-value { font:600 28px/1.1 var(--font-num, 'Mona Sans', ui-sans-serif, system-ui, sans-serif); letter-spacing:-0.02em; font-variant-numeric:proportional-nums lining-nums; color:var(--ink, #1c1b19); } .ds-kpi-value small { font-size:14px; font-weight:500; letter-spacing:0; margin-left:2px; color:var(--muted, #68645c); } .ds-kpi-sub { display:flex; align-items:center; gap:6px; flex-wrap:wrap; font-size:12px; color:var(--muted, #68645c); min-height:18px; } .ds-delta { display:inline-flex; align-items:center; gap:2px; font:600 11.5px/1 var(--font-num, 'Mona Sans', ui-sans-serif, system-ui, sans-serif); font-variant-numeric:proportional-nums lining-nums; } .ds-delta .ds-ic { width:11px; height:11px; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; } .ds-up { color:var(--ok, #288e70); }"
+    },
+    {
+      "name": "Routing Ruler",
+      "kind": "custom",
+      "refersTo": "routing-ruler",
+      "description": "Signature: a 0-100 track split into Rejected / Hold / Technical Review / Shortlisted at the JD's thresholds (default 45 / 60 / 75), with a graphite mark at the score beside a right-aligned fit numeral in proportional figures.",
+      "html": "<div class=\"ds-fit\"><span class=\"ds-fit-num\">68</span><div class=\"ds-ruler\" role=\"img\" aria-label=\"Score 68 of 100\"><div class=\"ds-ruler-track\"><span class=\"ds-b-rejected\" style=\"flex:45 1 0\"></span><span class=\"ds-b-hold\" style=\"flex:15 1 0\"></span><span class=\"ds-b-review\" style=\"flex:15 1 0\"></span><span class=\"ds-b-short\" style=\"flex:25 1 0\"></span></div><span class=\"ds-ruler-mark\" style=\"left:68%\"></span></div></div>",
+      "css": ".ds-fit { display:flex; align-items:center; gap:10px; } .ds-fit-num { width:26px; text-align:right; font:600 14px/1 var(--font-num, 'Mona Sans', ui-sans-serif, system-ui, sans-serif); font-variant-numeric:proportional-nums lining-nums; color:var(--ink, #1c1b19); } .ds-ruler { position:relative; width:84px; height:14px; flex:none; } .ds-ruler-track { position:absolute; inset:4px 0; display:flex; gap:2px; } .ds-ruler-track span { height:100%; border-radius:2px; } .ds-b-rejected { background:color-mix(in srgb, var(--band-rejected, #a6a199) 26%, var(--card, #ffffff)); } .ds-b-hold { background:color-mix(in srgb, var(--band-hold, #d1a55a) 26%, var(--card, #ffffff)); } .ds-b-review { background:color-mix(in srgb, var(--band-review, #3660a3) 24%, var(--card, #ffffff)); } .ds-b-short { background:color-mix(in srgb, var(--band-short, #288e70) 28%, var(--card, #ffffff)); } .ds-ruler-mark { position:absolute; top:0; bottom:0; width:3px; margin-left:-1.5px; border-radius:2px; background:var(--ink, #1c1b19); box-shadow:0 0 0 2px var(--card, #ffffff); } .ds-ruler:focus-visible { outline:2px solid var(--accent, #145a6b); outline-offset:2px; border-radius:4px; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Flat white work card: 12px corners, 1px warm hairline, no shadow; head divided by a hairline, figures right-aligned in proportional Mona Sans.",
+      "html": "<section class=\"ds-card\"><header class=\"ds-card-head\"><h2>Top critical gaps</h2><span>Unique candidates missing it</span></header><div class=\"ds-card-body\"><div class=\"ds-rank\"><span>PostgreSQL</span><span class=\"ds-val\">3</span><span class=\"ds-share\">38%</span><i style=\"--w:38%\"></i></div><div class=\"ds-rank\"><span>Kubernetes</span><span class=\"ds-val\">2</span><span class=\"ds-share\">25%</span><i style=\"--w:25%\"></i></div></div></section>",
+      "css": ".ds-card { background:var(--card, #ffffff); border:1px solid var(--line, rgb(28 27 25 / 0.10)); border-radius:var(--r-card, 12px); color:var(--ink, #1c1b19); font-family:var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); } .ds-card-head { display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid var(--line, rgb(28 27 25 / 0.10)); } .ds-card-head h2 { margin:0; font-size:14px; font-weight:600; letter-spacing:-0.005em; } .ds-card-head span { font-size:12.5px; color:var(--muted, #68645c); } .ds-card-body { padding:8px 16px 16px; } .ds-rank { position:relative; display:grid; grid-template-columns:1fr auto 44px; gap:12px; align-items:center; height:38px; padding:0 2px 4px; font-size:13px; } .ds-rank .ds-val { font:400 12.5px/1 var(--font-num, 'Mona Sans', ui-sans-serif, system-ui, sans-serif); font-variant-numeric:proportional-nums lining-nums; text-align:right; } .ds-rank .ds-share { font:400 12px/1 var(--font-num, 'Mona Sans', ui-sans-serif, system-ui, sans-serif); font-variant-numeric:proportional-nums lining-nums; color:var(--muted, #68645c); text-align:right; } .ds-rank i { position:absolute; left:0; bottom:4px; height:3px; width:var(--w); border-radius:3px; background:color-mix(in srgb, var(--warn, #ab7d25) 75%, transparent); } .ds-rank:hover i { background:var(--warn, #ab7d25); }"
+    },
+    {
+      "name": "Compare Grid",
+      "kind": "card",
+      "refersTo": "compare-label",
+      "description": "Side-by-side comparison of 2-4 candidates: sunken label column, neutral avatars, proportional hero fit, dimension values over petrol bars, viridian 'Best' on the leading value.",
+      "html": "<div class=\"ds-cmp\" style=\"--cols:2\"><div class=\"ds-cmp-label\"></div><div class=\"ds-cmp-person\"><span class=\"ds-avatar\">AR</span><div><div class=\"ds-name\">Aarav Rao</div><div class=\"ds-sub\">Backend Engineer</div></div></div><div class=\"ds-cmp-person\"><span class=\"ds-avatar\">MK</span><div><div class=\"ds-name\">Meera Kapoor</div><div class=\"ds-sub\">Platform Engineer</div></div></div><div class=\"ds-cmp-label\">Overall role fit</div><div class=\"ds-cmp-cell ds-best\"><div class=\"ds-cmp-val\"><span class=\"ds-cmp-num ds-lg\">78</span><span class=\"ds-best-tag\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Best</span></div></div><div class=\"ds-cmp-cell\"><div class=\"ds-cmp-val\"><span class=\"ds-cmp-num ds-lg\">64</span></div></div><div class=\"ds-cmp-label\">Technical skills</div><div class=\"ds-cmp-cell\"><div class=\"ds-cmp-val\"><span class=\"ds-cmp-num\">71</span></div><span class=\"ds-cmp-bar\"><i style=\"width:71%\"></i></span></div><div class=\"ds-cmp-cell ds-best\"><div class=\"ds-cmp-val\"><span class=\"ds-cmp-num\">74</span><span class=\"ds-best-tag\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Best</span></div><span class=\"ds-cmp-bar\"><i style=\"width:74%\"></i></span></div></div>",
+      "css": ".ds-cmp { display:grid; grid-template-columns:168px repeat(var(--cols, 2), minmax(190px, 1fr)); background:var(--card, #ffffff); border:1px solid var(--line, rgb(28 27 25 / 0.10)); border-radius:var(--r-card, 12px); overflow:hidden; font-family:var(--font-ui, 'Mona Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif); color:var(--ink, #1c1b19); } .ds-cmp > div { padding:12px 16px; border-bottom:1px solid var(--line, rgb(28 27 25 / 0.10)); min-width:0; } .ds-cmp-label { font-size:12.5px; font-weight:500; color:var(--muted, #68645c); background:var(--sunken, #f8f7f4); border-right:1px solid var(--line, rgb(28 27 25 / 0.10)); } .ds-cmp-person { display:flex; gap:10px; align-items:center; } .ds-avatar { width:30px; height:30px; border-radius:8px; display:grid; place-items:center; flex:none; font-size:11.5px; font-weight:600; letter-spacing:0.02em; color:var(--ink-2, #45423c); background:var(--soft, #eeede8); border:1px solid var(--line, rgb(28 27 25 / 0.10)); } .ds-name { font-size:13px; font-weight:500; } .ds-sub { font-size:12px; color:var(--muted, #68645c); } .ds-cmp-cell { display:grid; gap:8px; align-content:start; font-size:13px; } .ds-cmp-val { display:flex; align-items:baseline; gap:8px; } .ds-cmp-num { font:600 15px/1.2 var(--font-num, 'Mona Sans', ui-sans-serif, system-ui, sans-serif); font-variant-numeric:proportional-nums lining-nums; color:var(--ink-2, #45423c); } .ds-cmp-num.ds-lg { font-size:26px; font-weight:650; letter-spacing:-0.02em; color:var(--ink, #1c1b19); } .ds-best .ds-cmp-num { color:var(--st-short, #0f5642); } .ds-best-tag { display:inline-flex; align-items:center; gap:3px; font-size:11px; font-weight:600; color:var(--st-short, #0f5642); } .ds-best-tag .ds-ic { width:12px; height:12px; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; } .ds-cmp-bar { display:block; height:4px; border-radius:2px; background:var(--soft, #eeede8); overflow:hidden; } .ds-cmp-bar i { display:block; height:100%; border-radius:2px; background:var(--accent, #145a6b); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Recruiter's Instrument",
+    "overview": "Resume Intelligence is an operating surface, not a showcase. It reads like a well-made instrument panel in the Keka HR and Linear tradition of executive restraint, cast in petrol and brass: a night-petrol rail, a warm bone ground, white work cards, 1px warm hairlines, graphite ink, and Mona Sans set small and even. Density is high and calm. Table rows are 56px, table text is 13px, and hierarchy comes from weight and ink step rather than from size.\n\nColour is information. One petrol accent marks what is selected, what acts, what has focus and what is progressing; a brass mark belongs to the rail alone. Five stage pigments (viridian, cobalt, yellow ochre, mulberry for duplicates and a recessive stone) are built in OKLCH at muted chroma, so there is no traffic-light green and red; they are validated for deutan, protan, tritan and normal vision in both themes, and appear only where a status is reported, never without a text label and a drawn glyph. Errors take their own burnt sienna, never shared with duplicates. Numbers are set in the same Mona Sans as the words, always in proportional lining figures, because its tabular set is code-styled (slashed zero, slab-serif one); numeric columns stay right-aligned so units line up. Fragment Mono is reserved for strings a machine wrote: hashes, file paths, event keys, the run log, key caps. The system ships light and dark themes from one paired token set, and the rail stays night petrol in both.\n\nThe signature is the routing ruler: a 0 to 100 track split into the Rejected, Hold, Technical Review and Shortlisted bands at the job description's own thresholds, with a graphite mark at the score. It appears compact in every table row and comparison column, full in the candidate drawer, and as the axis of the fit-distribution chart where each candidate is a dot. The owner has ruled out neon purple or cyan gradients, glowing borders, emoji as icons, uneven card grids, Tailwind-default palettes, and fonts or number styles that read as machine-generated, which is why Inter and monospaced numerals left the system.",
+    "keyCharacteristics": [
+      "Night-petrol rail, bone ground, white cards, 1px warm hairlines; flat at rest.",
+      "One petrol accent on the page; brass only in the rail.",
+      "Colour-blind-safe stage pigments reserved for status, always with text and a drawn glyph; rejected is a recessive stone, errors a separate burnt sienna.",
+      "Mona Sans for every word and every number; Fragment Mono only for machine strings.",
+      "Proportional lining figures everywhere; right-aligned columns keep units in line.",
+      "Dense, table-first layout on even card grids; the routing ruler carries every score.",
+      "Light and dark themes from paired tokens; the rail stays night petrol in both."
+    ],
+    "rules": [
+      {
+        "name": "The One Petrol Rule",
+        "body": "Petrol is the only accent on the page plane. It marks what is selected, what acts, what has focus and what is progressing; it never fills a decorative block, and data series that are not status (the four dimension weights) are tints of it at 100, 65, 40 and 20%, never a new hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Brass-In-The-Rail Rule",
+        "body": "Brass is the brand mark: the mark itself, the current page's rail icon and the rail's focus ring. It never crosses onto the page plane, where Yellow Ochre already means borderline.",
+        "section": "colors"
+      },
+      {
+        "name": "The Status-Only Hue Rule",
+        "body": "Viridian, cobalt, yellow ochre, stone, mulberry and burnt sienna appear only where a status is being reported: a stage, a dedup verdict, a skill match, gap or miss, a delta, a best value, a run or file result, an error. Mulberry speaks only for duplicates and burnt sienna only for errors. Never as decoration, never as identity; avatars stay neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never-Alone Rule",
+        "body": "A stage hue always travels with its text label and a drawn glyph. Tags, stage filter tabs and \"Move to stage\" menus carry the words beside the glyph: a solid disc with a knocked-out check for Shortlisted and with a knocked-out cross for Rejected (the decisions), a ring with a 3/4 Harvey ball for Technical Review and with a 1/2 Harvey ball for Hold (the open stages), and a copy mark for Duplicate, because a duplicate is a flag, not a grade. Chart legends pair the words with dots, a hollow ring marks duplicate dots in charts, and skill chips carry a check or cross icon.",
+        "section": "colors"
+      },
+      {
+        "name": "The Figures Rule",
+        "body": "Numbers are set in Mona Sans, never in a monospace, and always in proportional lining figures. Mona Sans's tabular set is code-styled (a slashed zero and a slab-serif one), so it is never switched on, not even in columns or live counters. A number that stands alone (the drawer score, a KPI value, the comparison's overall fit, a number in running text) reads like type; numbers that line up with others in a column (table scores, counts, latencies, axis ticks, timestamps, deltas, comparison values) stay right-aligned so their units line up; counters that tick while you watch hold a minimum width instead (1.3ch for stage-tab counts, 3ch for run stats).",
+        "section": "typography"
+      },
+      {
+        "name": "The Machine-String Rule",
+        "body": "Fragment Mono sets only strings a machine wrote: hashes, file paths, event keys, the run log, environment variable names and key caps. It never sets a quantity a person reads, a label, a heading or a sentence.",
+        "section": "typography"
+      },
+      {
+        "name": "The Small Ramp Rule",
+        "body": "UI text lives between 11px and 18px. Hierarchy comes from weight (400, 500, 600, 650) and ink step (Graphite Ink, Graphite Two, Warm Muted); only score numerals go larger. Nothing is uppercased, and tracking tightens only on headings and score numerals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Even Grid Rule",
+        "body": "Peer cards share one track rule and one height: equal fractions (KPI cells, run stats, settings cards, comparison columns) or the single 1.35 : 1 chart pair. List-and-detail views put a fixed column beside a fluid one, top-aligned. No staggered, masonry or ad-hoc mosaic card grids.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-At-Rest Rule",
+        "body": "Nothing on the page plane casts a shadow; cards separate from the ground by tone and a hairline. A shadow means the surface floats and will go away. The selected-segment lift is the one in-plane exception, and it marks a choice, not a container.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Structure is drawn with 1px lines. Heavier strokes are reserved for state (the 2px focus outline, the 2px active-tab underline, the 2px duplicate ring) and for the dropzone's 1.5px dashed target.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Shrinking Corner Rule",
+        "body": "A smaller element never has a larger radius than its container; nested radii step down by the padding between them.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do set every word and every number in Mona Sans in proportional lining figures, right-align numeric columns so units line up, and give live counters a minimum width so they don't jitter.",
+      "Do reserve Fragment Mono for hashes, file paths, event keys, the run log, environment variable names and key caps.",
+      "Do draw structure with 1px warm hairlines (`line` to divide, `line-strong` for edges that can be operated) on bone and white surfaces, and keep cards flat at rest.",
+      "Do keep Petrol for selection, action, focus and progress, and fill only the button that moves the story forward in its region.",
+      "Do keep Brass to the brand mark, the current page's rail icon and the rail focus ring.",
+      "Do show a stage with its pigment, its drawn glyph and its text label together, using that stage's `st-*`, `tint-*`, `edge-*` and `gl-*` tokens.",
+      "Do carry every fit score on the routing ruler at the job description's own thresholds: compact in rows and comparison columns, full in the drawer, as dots in the distribution.",
+      "Do flag duplicates and critical gaps on the candidate's own row (dedup trace, yellow-ochre gap line, capped tag), not in a separate report.",
+      "Do ship every surface in both themes from the paired tokens, and keep the rail night petrol in both.",
+      "Do keep card grids even, with grid children at `minmax(0, 1fr)` so long lines truncate instead of widening the page.",
+      "Do keep transitions between 0.12s and 0.26s on the shared ease-out curve and honour reduced motion."
+    ],
+    "donts": [
+      "Don't use gradients, neon purple or cyan, glows or glowing borders. The only halo in the system is the focus ring on inputs (3px) and range thumbs (4px).",
+      "Don't use emoji or text glyphs as icons; icons are 1.75px-stroke SVG line icons at 14, 16 or 20px.",
+      "Don't use viridian, cobalt, yellow ochre, stone, mulberry or burnt sienna for decoration, identity or emphasis, don't use mulberry for errors or burnt sienna for duplicates, and don't tint avatars.",
+      "Don't introduce a second page accent; non-status series are tints of Petrol, and Brass stays in the rail.",
+      "Don't use Tailwind's default emerald, blue, amber and red for stages; a new status colour must pass the same deutan, protan and tritan check as the existing four.",
+      "Don't set numbers, labels, headings or prose in Fragment Mono, and don't uppercase labels.",
+      "Don't use pure black for ink or cool zinc greys for the ground and hairlines; the neutrals are warm bone and graphite.",
+      "Don't put shadows on cards, tables or the KPI ribbon; shadows belong to what floats.",
+      "Don't build uneven, staggered or masonry card grids.",
+      "Don't treat the KPI ribbon's single hairline-split card as a template for other card groups."
+    ]
+  }
+}

@@ -1,3 +1,15 @@
 ﻿venv/
 .env
 __pycache__/
+*.pyc
+*.tmp
+
+# Runtime data: candidates, batches, audit log, dedup registry, uploads, exports
+data/
+service_account.json
+
+# Local design tooling (agent skills and their working state), not part of the app
+.agents/
+.claude/
+skills-lock.json
+.impeccable/questions/

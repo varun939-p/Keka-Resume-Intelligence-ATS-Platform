@@ -1,156 +1,117 @@
-# 🚀 Keka Resume Intelligence POC — Next-Gen ATS Scoring & 1,000+ Resumes Bulk Scanner
+# Keka Resume Intelligence
 
-<div align="center">
+Resume screening for recruiting teams: parse a folder of resumes, block duplicates with three independent checks, score every candidate on four explainable dimensions against a job description, and route each one to a pipeline stage.
 
-![Keka ATS Intelligence](https://img.shields.io/badge/Keka_HR_Tech-Hyderabad_Based_✅-3b82f6?style=for-the-badge)
-![Company Scale](https://img.shields.io/badge/Scale-500+_Employees_|_6,500+_Enterprises-8b5cf6?style=for-the-badge)
-![Tech Stack](https://img.shields.io/badge/Backend-Heavy_Python_|_FastAPI_|_Celery-10b981?style=for-the-badge)
-![Bulk Scanner](https://img.shields.io/badge/Bulk_Intake-1,000+_Resumes_in_<2s-8b5cf6?style=for-the-badge)
-![AI Engine](https://img.shields.io/badge/AI_Engine-Groq_LLaMA_3.3_70B_|_OpenAI_|_Local_NLP-f59e0b?style=for-the-badge)
+Runs fully offline with a deterministic scoring engine. Groq or OpenAI keys add hybrid LLM scoring; a Google service account adds a Sheets mirror.
 
-**Transforming Keka's Applicant Tracking System (ATS) from basic keyword matching into an automated, semantic LLM-powered hiring engine capable of scanning 1,000+ daily resumes with zero latency and 3-layer deduplication protection.**
+[![5-minute walkthrough on Loom](https://cdn.loom.com/sessions/thumbnails/942f148659e6439ea4d83f5d73935d63-with-play.gif)](https://www.loom.com/share/942f148659e6439ea4d83f5d73935d63)
 
-</div>
+[Watch the 5-minute walkthrough on Loom](https://www.loom.com/share/942f148659e6439ea4d83f5d73935d63) (recorded on the July 2026 build).
 
-## 🎥 Project Walkthrough Video
+## Run it
 
-[![Watch the 5-Minute Walkthrough on Loom](https://cdn.loom.com/sessions/thumbnails/942f148659e6439ea4d83f5d73935d63-with-play.gif)](https://www.loom.com/share/942f148659e6439ea4d83f5d73935d63)
-
-> **👉 [Click the visual preview above or right here to watch the full 5-minute live demo on Loom!](https://www.loom.com/share/942f148659e6439ea4d83f5d73935d63)**
-
----
-
-## 🎯 Executive Summary: Why Keka Needs Semantic Resume Intelligence
-
-| Keka Context & Scale | The ATS Challenge (Current State) | The Keka Resume Intelligence Solution |
-| :--- | :--- | :--- |
-| **📍 Hyderabad Based Engineering Hub** ✅ | Recruiter bottlenecks screening local talent across massive multi-format PDF submissions. | **Automated Location & Domain Fit:** Built-in heuristics score candidates on Hyderabad location preference and HR Tech / ATS domain affinity. |
-| **⚡ Bulk Screening for 1,000+ Resumes** | Sequential LLM calls time out or hit rate limits when processing thousands of client applications. | **High-Throughput Bulk Scanner (`bulk_generator.py`):** Spawns asynchronous worker pools to evaluate **1,000+ applicant CVs in under 2 seconds**, catching 120+ duplicate profiles (`Exact SHA-256` & `Semantic Email/Phone`). |
-| **🐍 Heavy Python Backend Usage** | Keyword matching fails to differentiate between a 6-year FastAPI/AsyncIO architect and a basic scripting developer. | **Deep Tech Stack Evaluation:** Semantic scoring assesses exact backend mastery (`FastAPI`, `Celery`, `PostgreSQL`, `Docker`, `AsyncIO`) against custom JDs. |
-| **🛡️ 3-Layer Deduplication Protection** | Candidates resubmit identical or reformatted CVs across multiple staffing agencies, polluting ATS databases. | **Exact SHA-256 + Semantic Profile Keys + 88% Fuzzy Similarity:** Automatically flags duplicates and links to the original `duplicate_of` candidate ID. |
-| **📊 Automation is Core to Keka's DNA** | Recruiters manually export CSVs and track feedback in disconnected spreadsheets. | **Live Google Sheets & Excel Synchronization:** Automated real-time sync with Google Sheets + one-click Excel (`.xlsx`) audit reports (`keka_1000_resumes_bulk_report.xlsx`). |
-
----
-
-## 🏗️ Exact Project Architecture & Directory Structure
-
-This Proof-of-Concept is built using Keka's preferred tech stack (**Python 3.13**, **FastAPI**, **pypdf**, **Groq LLaMA**, **gspread**, **pandas**, **openpyxl**) with a clean, production-grade repository structure:
-
-```text
-keka-resume-intelligence/
-│
-├── frontend/                     # 🚀 Dedicated Frontend Application (Full SPA)
-│   ├── index.html                # Enterprise SPA Web Dashboard (Interactive UI with Bulk Scanner Tab)
-│   ├── style.css                 # Responsive Dark-Mode UI stylesheet & stats ribbon
-│   └── app.js                    # Client API controller & dual-mode (mock + live REST) engine
-│
-├── main.py                       # ⚙️ FastAPI Backend App & API Router (serves /api/* and /)
-├── scorer.py                     # Multi-provider LLM scoring logic (Groq LLaMA 3.3 / OpenAI / Local Heuristics)
-├── parser.py                     # Multi-format resume text extractor (PDF/TXT/DOCX) & 3-Layer Deduplication Engine
-├── bulk_generator.py             # ⚡ High-Throughput Bulk Screening Engine (Simulates & scores 1,000+ resumes)
-├── sheets.py                     # Real-time Google Sheets logger & automated Excel (.xlsx) report exporter
-├── requirements.txt              # Production dependencies (fastapi, uvicorn, pypdf, groq, pandas, etc.)
-├── .env                          # API keys configuration & environment mode (POC/PRODUCTION)
-├── sample_resumes/               # 10 pre-loaded, realistic test PDF & TXT resumes across varied fit levels
-│   ├── resume_1_arjun_verma_sr_python.pdf     (Target Fit: Senior Python/FastAPI Engineer — 100/100)
-│   ├── resume_2_priya_sharma_data_eng.pdf     (Target Fit: Data & Backend Automation Engineer — 94/100)
-│   ├── resume_3_arjun_verma_duplicate.pdf     (Duplicate Test: Exact semantic match of Resume 1)
-│   ├── resume_4_rahul_gupta_java_legacy.pdf   (Low Fit: Java SpringBoot Monolith Developer — 47/100)
-│   ├── resume_5_sneha_reddy_jr_backend.pdf    (Junior Fit: 1.5 yrs exp Python developer — 68/100)
-│   ├── resume_6_vikram_singh_devops.pdf       (DevOps & Cloud Infrastructure Specialist — 76/100)
-│   ├── resume_7_kavya_nair_hr_analyst.pdf     (Non-Engineering: Senior HR Operations & Recruiter)
-│   ├── resume_8_rohit_kumar_fullstack.pdf     (Target Fit: Full Stack Python + React Engineer — 91/100)
-│   ├── resume_9_rohit_kumar_duplicate.pdf     (Duplicate Test: Reformatted duplicate of Resume 8)
-│   └── resume_10_ananya_deshmukh_ml_eng.pdf   (AI/ML Lead: LLaMA, LangChain & RAG Specialist — 95/100)
-│
-├── sample_jd/                    # Realistic Keka Engineering Job Descriptions
-│   ├── backend_engineer.txt                   (Core Role: Senior Python Backend Engineer — Hyderabad)
-│   ├── ai_ml_engineer.txt                     (AI Role: Lead AI/ML Resume Intelligence Engineer)
-│   └── fullstack_engineer.txt                 (Portal Role: Senior Full Stack Python/React Engineer)
-│
-├── keka_ats_scoring_report.xlsx  # Automatically generated Excel report (10 test candidates)
-└── keka_1000_resumes_bulk_report.xlsx # Complete 1,000-candidate Bulk Screening Excel report
-```
-
----
-
-## ⚡ Key Product Features
-
-### 1. 🚀 NEW: 1,000+ Resumes Bulk Scanner Tab (`bulk_generator.py`)
-- Designed specifically for Keka when screening massive daily application intakes across client organizations.
-- Simulates worker-pool ingestion of **1,000 applicant CVs** across Indian engineering hubs (`Hyderabad`, `Bangalore`, `Pune`, `Gurgaon`).
-- Automatically categorizes candidates into strict recommendation tiers:
-  - **`Strong Hire / Immediate Interview` (Score 82–100): ~95 candidates (`9.5%`)**
-  - **`Interview / Good Fit` (Score 68–81): ~245 candidates (`24.5%`)**
-  - **`Hold / Potential Pipeline` (Score 52–67): ~340 candidates (`34.0%`)**
-  - **`Reject / Low Fit` (Score <52): ~320 candidates (`32.0%`)**
-- Features a **Top 50 Shortlisted Leaderboard Table** (`#1` to `#50`) and a one-click button to download the complete **1,000-Candidate Excel Report (`keka_1000_resumes_bulk_report.xlsx`)**.
-
-### 2. Multi-Provider LLM Scoring & Zero-Latency Local Fallback
-- **Groq LLaMA 3.3 70B Versatile Integration:** Delivers ultra-fast, structured JSON candidate evaluations in `<500ms`.
-- **OpenAI GPT-4o-mini Compatibility:** Seamlessly switchable via API header or UI dropdown.
-- **High-Precision Local Heuristic Engine:** Runs instantly with **zero external latency** when API keys are omitted during offline testing or high-volume bulk sweeps.
-
-### 3. Granular 100-Point Scoring Breakdown
-Every candidate is evaluated across four strict operational criteria:
-- **Technical Skills & Python Mastery (`/35 pts`):** Checks core frameworks (`FastAPI`, `Django`, `Celery`, `AsyncIO`, `PostgreSQL`, `Docker`).
-- **Relevant Experience & Scale (`/30 pts`):** Evaluates years of experience, distributed systems concurrency, and high-volume data handling.
-- **Education & Certifications (`/15 pts`):** Assesses academic foundation (`B.Tech/M.Tech in CS/IT`, `IIT/NIT/IIIT` distinction).
-- **Keka Domain & Cultural Fit (`/20 pts`):** Prioritizes candidates located in **Hyderabad** (`Hyderabad Based ✅`) with demonstrated passion for automation, HR tech, payroll, or ATS platforms.
-
-### 4. 3-Layer Deduplication & Anti-Fraud Engine (`parser.py`)
-To prevent duplicate submissions across 1,000s of client applications, the engine executes three sequential checks before candidate registration:
-1. **Exact Cryptographic SHA-256 Fingerprint:** Detects identical file uploads instantly (`100.0% match`).
-2. **Normalized Semantic Profile Key:** Extracts candidate email address (`arjun.verma.py@gmail.com`) and phone (`+919876543210`). Even if the candidate changes their resume layout (`resume_3_arjun_verma_duplicate.pdf`), the system flags:  
-   `⚠️ Semantic Profile Match: Candidate profile already exists in ATS via 'resume_1_arjun_verma_sr_python.pdf'. Email/Phone match.`
-3. **Fuzzy Content Similarity:** Uses SequenceMatcher / Jaccard similarity. If content overlap exceeds `88%`, the application is flagged with its percentage match.
-
----
-
-## 🚀 Quick Start & Installation Guide
-
-### Step 1: Navigate to Project Directory & Activate Virtual Environment
 ```bash
-cd /home/user/keka-resume-intelligence
-source /home/user/.venv/bin/activate
+python -m venv venv
+venv\Scripts\activate            # macOS/Linux: source venv/bin/activate
+pip install -r requirements.txt
+python main.py                   # http://127.0.0.1:8000  ·  API docs at /docs
 ```
 
-### Step 2: Launch the FastAPI Application & Full-Stack Web Dashboard
-```bash
-uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+Open the dashboard and press **Run demo scan**: 10 sample resumes (two of them planted duplicates) are scored against the Senior Python Backend Engineer JD in under a second.
+
+## Two workspaces
+
+| | Demo | Live |
+|---|---|---|
+| Job descriptions | `sample_jd/` (read-only) | samples plus your own, with editable requirements, weights and thresholds |
+| Resumes | `sample_resumes/` | **Select folder** (recursive), **Select files**, or drag and drop a folder; PDF, DOCX, TXT up to 10 MB (4 MB on Vercel) |
+| Persistence | Reset on every scan | Kept until you reset it in Integrations |
+
+The mode switch in the header is remembered per browser. Demo and Live data never mix: candidates, batches and the dedup registry are all scoped per workspace.
+
+## Pipeline
+
+Every resume passes four stages, and each stage is streamed to the dashboard over server-sent events.
+
+1. **Parse** (`parser.py`): text from PDF/DOCX/TXT; name, email, phone, LinkedIn, GitHub, location, headline, dated roles (overlaps merged), total experience (stated or from dates), education (level, field, institution, GPA), skills from a 120-skill taxonomy (`taxonomy.py`), and quantified achievements.
+2. **Deduplicate** (`dedup.py`):
+   - **L1 file fingerprint:** SHA-256 of the bytes and of the normalized text.
+   - **L2 contact hash:** SHA-256 of the normalized email and phone. Raw contact data never enters the registry.
+   - **L3 semantic similarity:** cosine similarity of term and bigram vectors; 86% or more is a match, 72% or more is flagged for review.
+3. **Score** (`scorer.py`), each dimension 0–100, with weights set per JD (default 40/25/20/15):
+   - **Technical skills match:** requirements extracted from the JD into critical / core / nice-to-have tiers. "FastAPI, Django, or Flask" becomes one any-of requirement.
+   - **Experience & seniority:** years against the JD band, scaled by how much of the critical stack appears in actual roles.
+   - **Project & impact depth:** quantified outcomes, ownership verbs, leadership signals.
+   - **Education & keywords:** degree level and field, blended with JD keyword similarity.
+   - A candidate covering under 35% of critical requirements is capped below the Hold threshold.
+4. **Route:** Shortlisted / Technical Review / Hold / Rejected at the JD's thresholds (default 75 / 60 / 45), or Duplicate Flagged. Recruiters can override any stage; the auto route is kept and can be restored.
+
+Each candidate carries a written recommendation (summary, strengths, concerns, interview focus), per-dimension evidence, the full dedup trace, and per-stage timings.
+
+Recruiter tools on top of the pipeline:
+- **Rescore batch:** re-rank the same resumes against another role, or against a JD whose weights you just changed, without re-uploading.
+- **Compare:** select 2–4 candidates for a side-by-side view, with the best value marked on every dimension.
+- **Keyboard:** `/` search · `Enter` open · `J`/`K` next and previous · `S`/`T`/`H`/`R` set the stage from the drawer.
+
+## LLM and Sheets (optional)
+
+Copy `.env.example` to `.env`.
+
+- `GROQ_API_KEY` or `OPENAI_API_KEY`: choose the engine in **Integrations**. The model supplies half of each dimension score and the written narrative. Skill matching, gaps and routing stay deterministic, and any API failure falls back per candidate, with the reason recorded.
+- `GOOGLE_SHEET_ID` + `GOOGLE_SERVICE_ACCOUNT_JSON`: share the sheet with the service account's email. **Sync to Sheets** mirrors the workspace into an `ATS Candidates` worksheet.
+
+## Outputs
+
+- **Excel** (`/api/exports/candidates.xlsx`): Summary, Candidates (ranked, stage-coloured, filterable), Skill Gaps and Audit Log sheets. It respects the current scope, stage filter, search or selection.
+- **Audit log**: every scan, duplicate flag, stage change, note, export, sync and reset, appended to `data/keka_sheets_audit_log.csv` and `.json` and downloadable from the Audit log view.
+
+## API
+
+| Method | Path | Purpose |
+|---|---|---|
+| GET | `/api/health`, `/api/settings`, `/api/integrations` | Status, engine, keys, storage |
+| PATCH | `/api/settings` | Choose the scoring engine |
+| GET/POST/PUT/DELETE | `/api/jds`, `/api/jds/{id}` | Job description library |
+| POST | `/api/jds/analyze`, `/api/jds/extract` | Profile JD text, or read a JD file |
+| GET | `/api/samples` | Sample resumes |
+| POST | `/api/batches` | Start a batch (`workspace`, `jd_id`, `expected`) |
+| POST | `/api/batches/{id}/samples`, `/api/batches/{id}/files` | Process one sample or one uploaded file |
+| GET | `/api/batches/{id}/events` | Server-sent progress events |
+| POST | `/api/batches/{id}/rescore` | Re-score a finished batch against any JD (`jd_id`) or its own JD's latest weights; keeps dedup results and recruiter overrides |
+| GET | `/api/candidates` | Filter, search and sort (`workspace`, `batch_id`, `stage`, `q`, `min_score`, `sort`, `order`) |
+| GET/PATCH/DELETE | `/api/candidates/{id}` | Detail with audit history; change stage or add a note |
+| POST | `/api/candidates/bulk` | Bulk stage change, restore auto stage, or delete |
+| GET | `/api/analytics` | KPI ribbon, stage counts, skill gaps (with previous-batch comparison) |
+| GET | `/api/audit`, `/api/exports/*` | Audit log and downloads |
+| POST | `/api/integrations/sheets/sync`, `/api/workspaces/{ws}/reset` | Sheets mirror, workspace reset |
+
+Errors always return `{"error": {"code", "message"}}`.
+
+## Layout
+
 ```
-Open your browser to `http://localhost:8000/`. You will be greeted by the **Keka Resume Intelligence Interactive SPA Dashboard**!
+main.py        REST API and dashboard host
+config.py      environment, paths (./data locally, /tmp/keka on Vercel)
+parser.py      text extraction and profile parsing
+taxonomy.py    skill taxonomy and matching
+dedup.py       three-layer deduplication registry
+scorer.py      JD profiling, scoring, routing, recommendation, LLM hybrid
+pipeline.py    batch orchestration and event stream
+store.py       candidates, batches, JD library, analytics
+sheets.py      audit log, Excel report, Google Sheets sync
+frontend/      dashboard (vanilla HTML/CSS/JS)
+sample_jd/, sample_resumes/   demo inputs (regenerate with generate_sample_resumes.py)
+```
 
----
+## Deploy on Vercel
 
-## 🌐 API Reference & Endpoints
+No `vercel.json` is needed. Vercel detects FastAPI from `requirements.txt` and serves the `app` object in `main.py`; the dashboard, `sample_jd/` and `sample_resumes/` ship inside the function. Add the optional keys from `.env.example` as project environment variables.
 
-| HTTP Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/status` | Returns system health, LLM provider availability, and logging stats. |
-| `GET` | `/api/jds` | Lists all pre-loaded Keka Job Descriptions (`backend_engineer.txt`, etc.). |
-| `GET` | `/api/sample-resumes` | Lists all 10 pre-generated test PDF resumes in `sample_resumes/`. |
-| `POST` | `/api/score-sample` | Scores a selected sample resume against any JD or custom text. Logs row. |
-| `POST` | `/api/score-upload` | Multipart form upload (`file`) to score custom candidate resumes on the fly. |
-| `POST` | `/api/bulk-scan-1000` | **🚀 NEW:** Scans **1,000+ resumes** concurrently, catches duplicates, and returns Top 50 leaderboard. |
-| `GET` | `/api/bulk-scan-status` | Returns the latest 1,000-resume bulk screening dataset. |
-| `POST` | `/api/batch-score` | Runs Keka ATS Batch Intelligence across the 10 test candidates. Returns ranked leaderboard. |
-| `POST` | `/api/deduplicate-check` | Standalone check for exact, semantic, and fuzzy duplicate profiles. |
-| `GET` | `/api/evaluations` | Returns the complete historical candidate evaluation log. |
-| `GET` | `/api/export-excel` | Generates and downloads `keka_ats_scoring_report.xlsx` (10 candidates). |
-| `GET` | `/api/export-bulk-excel` | **🚀 NEW:** Generates and downloads `keka_1000_resumes_bulk_report.xlsx` (1,000 candidates). |
+When the `VERCEL` variable is set (Vercel sets it automatically):
+- Data is written to `/tmp/keka`, the only writable location.
+- Uploads are capped at 4 MB per file, under Vercel's 4.5 MB request-body limit.
 
----
+## Limits
 
-## 📊 Sample 1,000-Resume Bulk Screening Benchmark
-
-When `POST /api/bulk-scan-1000` is executed against **Senior Python Backend Engineer (`backend_engineer.txt`)**:
-
-- **Total Resumes Processed:** `1,000 applications` in `1.84 seconds`
-- **Unique Applicants Verified:** `880 candidates` (`100% deduplicated`)
-- **Duplicates Caught (`Exact Hash + Semantic Profile`):** `120 candidates (12.0%)`
-- **Hyderabad Local Pool (`Hyderabad Based ✅`):** `420 candidates (42.0%)`
-- **Shortlisted Top Tier (`Score 82+ Strong Hire`):** `95 candidates (9.5%)`
-
----
-*Built with ❤️ and Engineering Excellence for Keka HR Tech — Hyderabad, India.*
+- No OCR: image-only PDFs are rejected with a clear reason, as are legacy `.doc` files.
+- On Vercel, storage under `/tmp` is ephemeral and per instance: a cold start or a second instance begins with an empty Live workspace. Use local hosting, or set `KEKA_DATA_DIR` to a persistent volume, for a durable talent pool.
