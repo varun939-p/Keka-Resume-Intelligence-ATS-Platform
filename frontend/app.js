@@ -412,6 +412,7 @@
     closeDrawer();
     renderModeSwitch();
     await loadWorkspace();
+    if (state.mode !== mode) return; // switched again while loading; the newer switch renders
     renderBanner();
     route();
     toast(mode === "demo" ? "Demo workspace: sample JDs and resumes" : "Live workspace: your resumes and job descriptions");
@@ -450,14 +451,19 @@
   // Workspace data
   // ------------------------------------------------------------------------
   async function loadWorkspace() {
+    // A response for a workspace the user has already switched away from is dropped, so a slow
+    // Live request can never overwrite Demo state (or the other way round).
+    const mode = ws();
     try {
       const [jds, batches] = await Promise.all([
-        api(`/api/jds${qs({ workspace: ws() })}`),
-        api(`/api/batches${qs({ workspace: ws() })}`),
+        api(`/api/jds${qs({ workspace: mode })}`),
+        api(`/api/batches${qs({ workspace: mode })}`),
       ]);
+      if (ws() !== mode) return;
       state.jds = jds.jds;
       state.batches = batches.batches;
     } catch (e) {
+      if (ws() !== mode) return;
       state.error = e.message;
     }
     if (state.filters.batch !== "all" && !state.batches.some((b) => b.id === state.filters.batch)) state.filters.batch = "all";
@@ -472,10 +478,9 @@
       state.scan.demoJd = (samples.find((j) => j.id === "sample-backend_engineer") || samples[0] || {}).id || null;
     }
     if (!state.scan.demoSelected) state.scan.demoSelected = new Set(state.samples.map((s) => s.filename));
-    if (!state.jds.some((j) => j.id === state.scan.liveJd)) {
-      const custom = state.jds.find((j) => j.kind === "custom");
-      state.scan.liveJd = (custom || state.jds.find((j) => j.id === "sample-backend_engineer") || state.jds[0] || {}).id || null;
-    }
+    // Live scores only against the recruiter's own JDs; with none yet, the scan page asks for one.
+    const custom = state.jds.filter((j) => j.kind === "custom");
+    if (!custom.some((j) => j.id === state.scan.liveJd)) state.scan.liveJd = custom[0]?.id || null;
   }
 
   // ------------------------------------------------------------------------
@@ -644,6 +649,10 @@
       return `<div class="empty">${icon("layers")}<h3>No demo candidates yet</h3><p>Run the sample batch: ${state.samples.length || 10} resumes, two of them planted duplicates, scored against the Senior Python Backend Engineer JD.</p>`
         + `<div class="actions"><button type="button" class="btn btn-primary" data-action="run-demo-now">${icon("play")}Run demo scan</button><button type="button" class="btn" data-action="nav" data-to="scan">Choose JD and resumes</button></div></div>`;
     }
+    if (!state.jds.length) {
+      return `<div class="empty">${icon("briefcase")}<h3>No candidates in the Live workspace</h3><p>Start with one of your own job descriptions, then upload a folder of resumes to score against it.</p>`
+        + `<div class="actions"><button type="button" class="btn btn-primary" data-action="new-jd">${icon("plus")}New job description</button><button type="button" class="btn" data-action="copy-sample-jd" aria-haspopup="menu">${icon("copy")}Copy a sample JD</button></div></div>`;
+    }
     return `<div class="empty">${icon("upload")}<h3>No candidates in the Live workspace</h3><p>Upload a folder of resumes and score them against one of your job descriptions.</p>`
       + `<div class="actions"><button type="button" class="btn btn-primary" data-action="nav" data-to="scan">${icon("upload")}Upload resumes</button><button type="button" class="btn" data-action="nav" data-to="jobs">${icon("plus")}New job description</button></div></div>`;
   }
@@ -732,8 +741,8 @@
     const rows = ids.map((id) => state.rows.find((r) => r.id === id) || (state.drawer.data?.id === id ? state.drawer.data : null)).filter(Boolean);
     const previous = new Map(rows.map((r) => [r.id, r.stage]));
     try {
-      if (ids.length === 1 && stage !== "__auto") await api(`/api/candidates/${ids[0]}`, { method: "PATCH", json: { stage } });
-      else await api("/api/candidates/bulk", { method: "POST", json: stage === "__auto" ? { ids, action: "restore_auto" } : { ids, action: "stage", stage } });
+      if (ids.length === 1 && stage !== "__auto") await api(`/api/candidates/${ids[0]}${qs({ workspace: ws() })}`, { method: "PATCH", json: { stage } });
+      else await api("/api/candidates/bulk", { method: "POST", json: stage === "__auto" ? { ids, action: "restore_auto", workspace: ws() } : { ids, action: "stage", stage, workspace: ws() } });
     } catch (e) { toast(e.message, "err"); return; }
     const name = rows.length === 1 ? (rows[0].name || rows[0].profile?.name) : `${ids.length} candidates`;
     const label = stage === "__auto" ? "their auto stage" : STAGES[stage].label;
@@ -765,7 +774,7 @@
     });
     if (!ok) return;
     try {
-      const res = await api("/api/candidates/bulk", { method: "POST", json: { ids, action: "delete" } });
+      const res = await api("/api/candidates/bulk", { method: "POST", json: { ids, action: "delete", workspace: ws() } });
       ids.forEach((id) => state.selection.delete(id));
       if (ids.includes(state.drawer.id)) closeDrawer();
       toast(`Deleted ${res.affected} candidate${res.affected === 1 ? "" : "s"}`);
@@ -871,7 +880,7 @@
       d.innerHTML = `<div class="drawer-loading"><span class="sk" style="width:45%;height:16px"></span><span class="sk" style="width:70%"></span><span class="sk" style="width:100%;height:120px;border-radius:10px"></span><span class="sk" style="width:100%;height:180px;border-radius:10px"></span></div>`;
     }
     try {
-      const data = await api(`/api/candidates/${id}`);
+      const data = await api(`/api/candidates/${id}${qs({ workspace: ws() })}`);
       if (state.drawer.id !== id) return;
       state.drawer.data = data;
       renderDrawer();
@@ -1041,16 +1050,21 @@
       skipped.filter((s) => s.reason === "size").length ? `${skipped.filter((s) => s.reason === "size").length} over ${maxFileMb()} MB` : "",
       skipped.filter((s) => s.reason === "empty").length ? `${skipped.filter((s) => s.reason === "empty").length} empty` : "",
     ].filter(Boolean).join(" · ");
-    el.innerHTML = `<div class="card"><div class="card-head"><h2>Job description</h2><button type="button" class="btn btn-ghost" data-action="new-jd">${icon("plus")}New</button></div>`
-      + `<div class="card-body" style="display:grid;gap:8px"><button type="button" class="select-btn" style="max-width:none;width:100%" data-action="menu-live-jd" aria-haspopup="menu" ${running ? "disabled" : ""}><span class="select-label">JD</span><span>${esc(jd?.title || "Choose a job description")}</span>${icon("chevron-down", "sm")}</button>`
-      + (jd ? `<div class="option-meta">${esc(jd.city || "Any location")} · <span class="mono">${esc(bandText(jd))}</span> · <span class="mono">${jd.requirement_counts.critical}</span> critical · weights <span class="mono">${jd.weights.technical}/${jd.weights.experience}/${jd.weights.impact}/${jd.weights.education}</span> · ${jd.kind === "sample" ? "sample" : "custom"}</div>` : "")
-      + `</div></div>`
+    const jdBody = state.jds.length
+      ? `<div class="card-body" style="display:grid;gap:8px"><button type="button" class="select-btn" style="max-width:none;width:100%" data-action="menu-live-jd" aria-haspopup="menu" ${running ? "disabled" : ""}><span class="select-label">JD</span><span>${esc(jd?.title || "Choose a job description")}</span>${icon("chevron-down", "sm")}</button>`
+        + (jd ? `<div class="option-meta">${esc(jd.city || "Any location")} · <span class="mono">${esc(bandText(jd))}</span> · <span class="mono">${jd.requirement_counts.critical}</span> critical · weights <span class="mono">${jd.weights.technical}/${jd.weights.experience}/${jd.weights.impact}/${jd.weights.education}</span></div>` : "")
+        + `</div>`
+      : `<div class="empty compact">${icon("briefcase")}<h3>No job descriptions in Live yet</h3><p>Live batches score against your own job descriptions. Write one, or copy a sample and edit it.</p>`
+        + `<div class="actions"><button type="button" class="btn btn-primary" data-action="new-jd">${icon("plus")}New job description</button><button type="button" class="btn" data-action="copy-sample-jd" aria-haspopup="menu">${icon("copy")}Copy a sample JD</button></div></div>`;
+    el.innerHTML = `<div class="card"><div class="card-head"><h2>Job description</h2>${state.jds.length ? `<button type="button" class="btn btn-ghost" data-action="new-jd">${icon("plus")}New</button>` : ""}</div>`
+      + jdBody
+      + `</div>`
       + `<div class="card"><div class="card-head"><h2>Resumes</h2><span class="meta mono">${q.length} queued${q.length ? ` · ${fmtSize(total)}` : ""}</span></div>`
       + `<div class="dropzone" id="dropzone">${icon("upload")}<strong>Drop a folder or resumes here</strong><p>PDF, DOCX or TXT · up to ${maxFileMb()} MB each · folders are read recursively</p>`
       + `<div class="actions"><button type="button" class="btn" data-action="pick-folder" ${running ? "disabled" : ""}>${icon("folder")}Select folder</button><button type="button" class="btn" data-action="pick-files" ${running ? "disabled" : ""}>${icon("file")}Select files</button></div></div>`
       + (skipped.length ? `<div class="skipped-note" data-tip="${esc(skipped.slice(0, 12).map((s) => s.path).join(", "))}">${skipped.length} file${skipped.length === 1 ? "" : "s"} skipped: ${esc(skippedText)}</div>` : "")
       + (q.length ? `<div class="file-list">${q.map((f, i) => `<div class="file-row">${icon("file")}<div><div class="name">${esc(f.name)}</div>${f.path !== f.name ? `<div class="path">${esc(f.path)}</div>` : ""}</div><div style="display:flex;align-items:center;gap:4px"><span class="size">${fmtSize(f.size)}</span><button type="button" class="icon-btn" data-action="remove-queued" data-i="${i}" aria-label="Remove ${esc(f.name)}">${icon("x", "sm")}</button></div></div>`).join("")}</div>` : "")
-      + `<div class="card-foot"><button type="button" class="btn btn-primary btn-lg btn-block" data-action="start-scan" ${!q.length || running || !jd ? "disabled" : ""}>${running ? `<span class="spinner"></span>Processing` : q.length ? `${icon("play")}Process ${q.length} resume${q.length === 1 ? "" : "s"}` : "Add resumes to start"}</button>`
+      + `<div class="card-foot"><button type="button" class="btn btn-primary btn-lg btn-block" data-action="start-scan" ${!q.length || running || !jd ? "disabled" : ""}>${running ? `<span class="spinner"></span>Processing` : q.length && !jd ? "Add a job description to start" : q.length ? `${icon("play")}Process ${q.length} resume${q.length === 1 ? "" : "s"}` : "Add resumes to start"}</button>`
       + (q.length && !running ? `<button type="button" class="btn btn-ghost btn-block" data-action="clear-queue">Clear queue</button>` : "")
       + `<div class="hint">${icon("cpu", "sm")}${esc(engineLabel())} · results stay in the Live workspace</div></div></div>`;
   }
@@ -1312,10 +1326,14 @@
   function renderJobsList() {
     const el = $("#jobs-list");
     el.innerHTML = `<div class="card-head"><h2>Job descriptions</h2><button type="button" class="btn btn-primary" data-action="new-jd">${icon("plus")}New</button></div>`
-      + `<div class="option-list scroll">${state.jds.map((j) => `<button type="button" class="option ${state.jobs.selectedId === j.id ? "is-checked" : ""}" data-action="select-jd" data-id="${j.id}">`
-        + `<div><div class="option-title">${esc(j.title)}</div><div class="option-meta">${esc(j.city || "Any location")} · <span class="mono">${esc(bandText(j))}</span> · <span class="mono">${j.requirement_counts.critical}</span> critical</div></div>`
-        + `<span class="job-kind">${j.kind === "sample" ? "SAMPLE" : "CUSTOM"}</span></button>`).join("")}</div>`
-      + (state.mode === "demo" ? `<div class="card-foot"><div class="hint">${icon("briefcase", "sm")}Custom job descriptions live in the Live workspace</div></div>` : "");
+      + (state.jds.length || state.mode === "demo"
+        ? `<div class="option-list scroll">${state.jds.map((j) => `<button type="button" class="option ${state.jobs.selectedId === j.id ? "is-checked" : ""}" data-action="select-jd" data-id="${j.id}">`
+          + `<div><div class="option-title">${esc(j.title)}</div><div class="option-meta">${esc(j.city || "Any location")} · <span class="mono">${esc(bandText(j))}</span> · <span class="mono">${j.requirement_counts.critical}</span> critical</div></div>`
+          + `<span class="job-kind">${j.kind === "sample" ? "SAMPLE" : "CUSTOM"}</span></button>`).join("")}</div>`
+        : `<div class="empty compact">${icon("briefcase")}<h3>No job descriptions yet</h3><p>Write your own, upload a JD file, or start from a copy of a sample.</p></div>`)
+      + (state.mode === "demo"
+        ? `<div class="card-foot"><div class="hint">${icon("briefcase", "sm")}Your own job descriptions live in the Live workspace</div></div>`
+        : `<div class="card-foot"><button type="button" class="btn btn-ghost btn-block" data-action="copy-sample-jd" aria-haspopup="menu">${icon("copy")}Copy a sample JD</button></div>`);
   }
 
   async function selectJd(id) {
@@ -1324,6 +1342,7 @@
     $("#jobs-editor").innerHTML = `<div class="drawer-loading"><span class="sk" style="width:40%;height:16px"></span><span class="sk" style="width:100%;height:34px"></span><span class="sk" style="width:100%;height:220px;border-radius:10px"></span></div>`;
     try {
       const jd = await api(`/api/jds/${id}`);
+      if (state.jobs.selectedId !== id) return; // a newer selection or a new draft won
       state.jobs.draft = {
         id: jd.id, kind: jd.kind, filename: jd.filename, title: jd.title, location: jd.location || "", text: jd.text,
         experience_min: jd.experience_min, experience_max: jd.experience_max,
@@ -1359,12 +1378,17 @@
   function renderJobsEditor() {
     const el = $("#jobs-editor");
     const d = state.jobs.draft;
-    if (!d) { el.innerHTML = `<div class="empty">${icon("briefcase")}<h3>No job description selected</h3><p>Pick one from the list or create a new one.</p></div>`; return; }
+    if (!d) {
+      el.innerHTML = state.mode === "live" && !state.jds.length
+        ? `<div class="empty">${icon("briefcase")}<h3>Create your first job description</h3><p>Paste or upload a JD; requirements, the experience band, weights and routing thresholds are set up from it.</p><div class="actions"><button type="button" class="btn btn-primary" data-action="new-jd">${icon("plus")}New job description</button></div></div>`
+        : `<div class="empty">${icon("briefcase")}<h3>No job description selected</h3><p>Pick one from the list or create a new one.</p></div>`;
+      return;
+    }
     const ro = d.kind === "sample" || state.mode === "demo";
     const dis = ro ? "disabled" : "";
     el.innerHTML = `<div class="card-head"><h2>${esc(d.id ? d.title : "New job description")}</h2><span class="meta">${d.kind === "sample" ? `<span class="code">sample_jd/${esc(d.filename || "")}</span>` : d.updated_at ? `Updated ${esc(relTime(d.updated_at))}` : d.created_at ? `Created ${esc(relTime(d.created_at))}` : "Not saved yet"}</span></div>`
       + `<div class="editor-body">`
-      + (ro ? `<div class="readonly-note">${icon("file")}${d.kind === "sample" ? "Sample job descriptions are read-only. Duplicate it to change requirements, weights or thresholds." : "Switch to the Live workspace to edit job descriptions."}</div>` : "")
+      + (ro ? `<div class="readonly-note">${icon("file")}${d.kind === "sample" ? "Sample job descriptions are read-only and belong to the Demo workspace. Copy one to Live to change requirements, weights or thresholds." : "Switch to the Live workspace to edit job descriptions."}</div>` : "")
       + `<div class="field-row"><label class="field"><span>Role title</span><input class="input" id="jd-title" data-jd="title" value="${esc(d.title)}" maxlength="120" placeholder="e.g. Senior Backend Engineer" ${dis}></label>`
       + `<label class="field"><span>Location</span><input class="input" data-jd="location" value="${esc(d.location)}" maxlength="120" placeholder="e.g. Hyderabad (Hybrid)" ${dis}></label></div>`
       + `<div class="field-row"><label class="field"><span>Minimum experience (yrs)</span><input class="input mono" type="number" min="0" max="40" step="0.5" data-jd="experience_min" value="${d.experience_min ?? ""}" placeholder="Any" ${dis}></label>`
@@ -1377,7 +1401,7 @@
       + `<div class="editor-section" id="threshold-section">${thresholdSection(d, ro)}</div>`
       + `</div><div class="editor-foot">`
       + (ro
-        ? `<button type="button" class="btn btn-primary" data-action="duplicate-jd">${icon("copy")}Duplicate to edit</button><button type="button" class="btn" data-action="use-jd">${icon("play")}Scan with this JD</button>`
+        ? `<button type="button" class="btn btn-primary" data-action="duplicate-jd">${icon("copy")}Copy to Live to edit</button><button type="button" class="btn" data-action="use-jd">${icon("play")}Scan with this JD</button>`
         : `<button type="button" class="btn btn-primary" data-action="save-jd" ${state.jobs.saving ? "disabled" : ""}>${state.jobs.saving ? `<span class="spinner"></span>` : icon("check")}${d.id ? "Save changes" : "Create job description"}</button>`
           + (d.id ? `<button type="button" class="btn" data-action="use-jd">${icon("play")}Scan with this JD</button>` : "")
           + `<span class="spacer"></span>` + (d.id ? `<button type="button" class="btn btn-danger" data-action="delete-jd">${icon("trash")}Delete</button>` : ""))
@@ -1692,7 +1716,7 @@
     "drawer-prev": () => stepDrawer(-1),
     "drawer-next": () => stepDrawer(1),
     "drawer-tab": (el) => { state.drawer.tab = el.dataset.tab; renderDrawer(); $(`#drawer [data-tab='${el.dataset.tab}']`)?.focus(); },
-    "download-resume": (el) => download(`/api/candidates/${el.dataset.id}/file`, "resume"),
+    "download-resume": (el) => download(`/api/candidates/${el.dataset.id}/file${qs({ workspace: ws() })}`, "resume"),
     "delete-candidate": (el) => deleteCandidates([el.dataset.id]),
     copy: async (el) => {
       try { await navigator.clipboard.writeText(el.dataset.value); toast(`${el.dataset.label} copied`); }
@@ -1730,6 +1754,19 @@
       newDraft();
     },
     "select-jd": (el) => selectJd(el.dataset.id),
+    // Copies a Demo sample into Live as an unsaved draft; saving it creates a Live-owned JD.
+    "copy-sample-jd": async (el) => {
+      let samples;
+      try { samples = (await api(`/api/jds${qs({ workspace: "demo" })}`)).jds; } catch (e) { toast(e.message, "err"); return; }
+      openMenu(el, samples.map((j) => ({ label: j.title, sub: `Sample · ${bandText(j)} · ${j.requirement_counts.critical} critical`, value: j.id })), async (it) => {
+        try {
+          const jd = await api(`/api/jds/${it.value}`);
+          navigate("jobs");
+          newDraft({ ...jd, filename: null });
+          toast("Copy created. Edit and save it as your own job description.");
+        } catch (e) { toast(e.message, "err"); }
+      }, { title: "Copy into Live" });
+    },
     "duplicate-jd": async () => {
       const src = state.jobs.draft;
       if (state.mode === "demo") await setMode("live");
@@ -1848,7 +1885,7 @@
     const text = form.note.value.trim();
     if (!text) { form.note.focus(); return; }
     try {
-      await api(`/api/candidates/${form.dataset.id}`, { method: "PATCH", json: { note: text } });
+      await api(`/api/candidates/${form.dataset.id}${qs({ workspace: ws() })}`, { method: "PATCH", json: { note: text } });
       toast("Note added");
       await openDrawer(form.dataset.id, { keepTab: true });
       refreshPipeline();

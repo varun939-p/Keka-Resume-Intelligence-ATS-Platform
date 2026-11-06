@@ -26,7 +26,7 @@ Scoring is deterministic and auditable by default (same input, same score, evide
 
 ## Operating Context
 
-- Two workspaces behind a global mode switch: **Demo** (bundled sample JDs from `sample_jd/` and resumes from `sample_resumes/`, reset per scan) and **Live** (the recruiter's own folders and custom JDs, persistent).
+- Two workspaces behind a global mode switch: **Demo** (bundled sample JDs from `sample_jd/` and resumes from `sample_resumes/`, reset per scan) and **Live** (only the recruiter's own folders and JDs, persistent; a sample JD enters Live only as an explicit, editable copy). The API rejects any batch, file or rescore that crosses workspaces.
 - Batches are processed file by file with live progress; results land in a filterable candidate table and a per-candidate drawer.
 - Outputs leave the tool as Excel (.xlsx), the CSV/JSON audit log, and an optional Google Sheets mirror.
 - Deploy targets: local FastAPI server, and Vercel (ephemeral `/tmp` storage).

@@ -133,9 +133,10 @@ def public_batch(b: Dict[str, Any]) -> Dict[str, Any]:
     return {**b, "summary": pipeline.batch_summary(b)}
 
 
-def _require_candidate(candidate_id: str) -> Dict[str, Any]:
+def _require_candidate(candidate_id: str, workspace: Optional[str] = None) -> Dict[str, Any]:
+    """Looks a candidate up; with a workspace, a candidate from the other workspace is treated as missing."""
     record = store.get_candidate(candidate_id)
-    if record is None:
+    if record is None or (workspace and record["workspace"] != workspace):
         raise not_found("Candidate")
     return record
 
@@ -236,7 +237,7 @@ def reset_workspace(workspace: Workspace) -> Dict[str, Any]:
 
 @app.get("/api/jds")
 def list_jds(workspace: Workspace = "live") -> Dict[str, Any]:
-    return {"jds": [public_jd(j) for j in jobs.list(include_custom=workspace == "live")]}
+    return {"jds": [public_jd(j) for j in jobs.list(workspace)]}
 
 
 @app.get("/api/jds/{jd_id}")
@@ -272,7 +273,7 @@ def update_jd(jd_id: str, payload: JDPayload) -> Dict[str, Any]:
     if existing is None:
         raise not_found("Job description")
     if existing["kind"] != "custom":
-        raise HTTPException(409, {"code": "read_only", "message": "Sample job descriptions are read-only. Duplicate it to edit."})
+        raise HTTPException(409, {"code": "read_only", "message": "Sample job descriptions are read-only. Copy one to Live to edit it."})
     jd = jobs.save_custom(payload.model_dump(), jd_id=jd_id)
     audit.log("jd.updated", "live", actor="recruiter", detail=f"{jd['title']} · weights {jd['weights']} · thresholds {jd['thresholds']}")
     return public_jd(jd, include_text=True)
@@ -474,8 +475,8 @@ def list_candidates(
 
 
 @app.get("/api/candidates/{candidate_id}")
-def get_candidate(candidate_id: str) -> Dict[str, Any]:
-    record = _require_candidate(candidate_id)
+def get_candidate(candidate_id: str, workspace: Optional[Workspace] = None) -> Dict[str, Any]:
+    record = _require_candidate(candidate_id, workspace)
     history = audit.entries(candidate_id=candidate_id, limit=50)["entries"]
     return {**record, "history": history}
 
@@ -486,8 +487,8 @@ class CandidatePatch(BaseModel):
 
 
 @app.patch("/api/candidates/{candidate_id}")
-def update_candidate(candidate_id: str, payload: CandidatePatch) -> Dict[str, Any]:
-    record = _require_candidate(candidate_id)
+def update_candidate(candidate_id: str, payload: CandidatePatch, workspace: Optional[Workspace] = None) -> Dict[str, Any]:
+    record = _require_candidate(candidate_id, workspace)
     if payload.stage is None and not (payload.note and payload.note.strip()):
         raise HTTPException(400, {"code": "empty_patch", "message": "Send a stage or a note."})
     previous = record["stage"]
@@ -513,6 +514,7 @@ class BulkAction(BaseModel):
     ids: List[str] = Field(..., min_length=1, max_length=2000)
     action: Literal["stage", "delete", "restore_auto"]
     stage: Optional[StageKey] = None
+    workspace: Optional[Workspace] = None
 
 
 @app.post("/api/candidates/bulk")
@@ -521,6 +523,11 @@ def bulk_candidates(payload: BulkAction) -> Dict[str, Any]:
     found = [c for c in found if c]
     if not found:
         raise not_found("Candidates")
+    if payload.workspace:
+        outside = [c for c in found if c["workspace"] != payload.workspace]
+        if outside:
+            raise HTTPException(404, {"code": "not_found", "message": (
+                f"{len(outside)} of the selected candidates are not in the {payload.workspace.title()} workspace.")})
     if payload.action == "delete":
         removed = store.delete_candidates([c["id"] for c in found])
         dedup_engine.remove([c["id"] for c in removed])
@@ -547,13 +554,14 @@ def bulk_candidates(payload: BulkAction) -> Dict[str, Any]:
 
 
 @app.delete("/api/candidates/{candidate_id}")
-def delete_candidate(candidate_id: str) -> Dict[str, Any]:
-    return bulk_candidates(BulkAction(ids=[candidate_id], action="delete"))
+def delete_candidate(candidate_id: str, workspace: Optional[Workspace] = None) -> Dict[str, Any]:
+    _require_candidate(candidate_id, workspace)
+    return bulk_candidates(BulkAction(ids=[candidate_id], action="delete", workspace=workspace))
 
 
 @app.get("/api/candidates/{candidate_id}/file")
-def candidate_file(candidate_id: str) -> FileResponse:
-    record = _require_candidate(candidate_id)
+def candidate_file(candidate_id: str, workspace: Optional[Workspace] = None) -> FileResponse:
+    record = _require_candidate(candidate_id, workspace)
     meta = record["file"]
     if meta.get("stored_path"):
         path = config.UPLOAD_DIR / meta["stored_path"]

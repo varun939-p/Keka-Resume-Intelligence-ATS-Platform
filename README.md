@@ -23,11 +23,17 @@ Open the dashboard and press **Run demo scan**: 10 sample resumes (two of them p
 
 | | Demo | Live |
 |---|---|---|
-| Job descriptions | `sample_jd/` (read-only) | samples plus your own, with editable requirements, weights and thresholds |
+| Job descriptions | `sample_jd/` (read-only) | your own only, with editable requirements, weights and thresholds (**Copy a sample JD** makes an editable Live copy) |
 | Resumes | `sample_resumes/` | **Select folder** (recursive), **Select files**, or drag and drop a folder; PDF, DOCX, TXT up to 10 MB (4 MB on Vercel) |
 | Persistence | Reset on every scan | Kept until you reset it in Integrations |
 
-The mode switch in the header is remembered per browser. Demo and Live data never mix: candidates, batches and the dedup registry are all scoped per workspace.
+The mode switch in the header is remembered per browser. Demo and Live data never mix: candidates, batches, job descriptions, analytics, the audit log and the dedup registry are all scoped per workspace.
+
+The API enforces the split, not just the UI:
+- A Demo batch accepts only sample JDs and sample resumes.
+- A Live batch accepts only your own JDs and uploaded files, and can only be rescored against your own JDs.
+- Anything else returns `409 workspace_mismatch`.
+- Candidate endpoints take an optional `workspace`. When it is set, a candidate from the other workspace returns `404`.
 
 ## Pipeline
 
@@ -77,10 +83,10 @@ Copy `.env.example` to `.env`.
 | POST | `/api/batches` | Start a batch (`workspace`, `jd_id`, `expected`) |
 | POST | `/api/batches/{id}/samples`, `/api/batches/{id}/files` | Process one sample or one uploaded file |
 | GET | `/api/batches/{id}/events` | Server-sent progress events |
-| POST | `/api/batches/{id}/rescore` | Re-score a finished batch against any JD (`jd_id`) or its own JD's latest weights; keeps dedup results and recruiter overrides |
+| POST | `/api/batches/{id}/rescore` | Re-score a finished batch against another JD in the same workspace (`jd_id`) or its own JD's latest weights; keeps dedup results and recruiter overrides |
 | GET | `/api/candidates` | Filter, search and sort (`workspace`, `batch_id`, `stage`, `q`, `min_score`, `sort`, `order`) |
-| GET/PATCH/DELETE | `/api/candidates/{id}` | Detail with audit history; change stage or add a note |
-| POST | `/api/candidates/bulk` | Bulk stage change, restore auto stage, or delete |
+| GET/PATCH/DELETE | `/api/candidates/{id}` | Detail with audit history; change stage or add a note (optional `workspace` scope) |
+| POST | `/api/candidates/bulk` | Bulk stage change, restore auto stage, or delete (optional `workspace` scope) |
 | GET | `/api/analytics` | KPI ribbon, stage counts, skill gaps (with previous-batch comparison) |
 | GET | `/api/audit`, `/api/exports/*` | Audit log and downloads |
 | POST | `/api/integrations/sheets/sync`, `/api/workspaces/{ws}/reset` | Sheets mirror, workspace reset |

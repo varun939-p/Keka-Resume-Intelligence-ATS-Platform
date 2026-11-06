@@ -235,12 +235,12 @@ class JobLibrary:
             "updated_at": overrides.get("updated_at"),
         }
 
-    def list(self, include_custom: bool = True) -> List[Dict[str, Any]]:
-        rows = list(self.samples().values())
-        if include_custom:
-            with self.lock:
-                rows += sorted(self.custom.values(), key=lambda j: j["created_at"] or "", reverse=True)
-        return rows
+    def list(self, workspace: str) -> List[Dict[str, Any]]:
+        """JDs owned by one workspace: Demo has the sample JDs, Live has only the recruiter's own."""
+        if workspace == "demo":
+            return list(self.samples().values())
+        with self.lock:
+            return sorted(self.custom.values(), key=lambda j: j["created_at"] or "", reverse=True)
 
     def get(self, jd_id: str) -> Optional[Dict[str, Any]]:
         if jd_id in self.samples():
@@ -283,8 +283,14 @@ class JobLibrary:
             return True
 
 
+def jd_workspace(jd: Dict[str, Any]) -> str:
+    """Sample JDs belong to the Demo workspace; every custom JD belongs to Live."""
+    return "demo" if jd["kind"] == "sample" else "live"
+
+
 def public_jd(jd: Dict[str, Any], include_text: bool = False) -> Dict[str, Any]:
     out = {k: v for k, v in jd.items() if k not in {"keyword_vector", "text"}}
+    out["workspace"] = jd_workspace(jd)
     out["requirement_counts"] = {t: len(v) for t, v in jd["requirements"].items()}
     if include_text:
         out["text"] = jd["text"]

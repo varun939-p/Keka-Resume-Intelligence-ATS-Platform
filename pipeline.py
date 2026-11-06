@@ -21,13 +21,33 @@ from dedup import DedupEngine
 from parser import ResumeParseError, extract_text, parse_resume
 from scorer import STAGES, ResumeScorer
 from sheets import AuditLog
-from store import JobLibrary, Store, new_id, now_iso
+from store import JobLibrary, Store, jd_workspace, new_id, now_iso
 
 
 class ProcessingError(Exception):
     def __init__(self, code: str, message: str, status: int = 422):
         super().__init__(message)
         self.code, self.message, self.status = code, message, status
+
+
+def require_jd_in_workspace(jd: Dict[str, Any], workspace: str) -> None:
+    """Demo scores only against sample JDs and Live only against the recruiter's own JDs."""
+    if jd_workspace(jd) == workspace:
+        return
+    if workspace == "demo":
+        message = "Demo batches score against the sample job descriptions only. Use the Live workspace for your own."
+    else:
+        message = "Live batches use your own job descriptions. Create one, or copy a sample, in Job descriptions."
+    raise ProcessingError("workspace_mismatch", message, 409)
+
+
+def require_source_in_workspace(source: str, workspace: str) -> None:
+    """Demo batches read the bundled sample resumes; Live batches take uploaded files only."""
+    if source == "sample" and workspace != "demo":
+        raise ProcessingError("workspace_mismatch", "Sample resumes can only be scanned in the Demo workspace.", 409)
+    if source == "upload" and workspace != "live":
+        raise ProcessingError("workspace_mismatch",
+                              "Uploads go to the Live workspace. The Demo workspace scans the bundled sample resumes only.", 409)
 
 
 class EventBus:
@@ -69,6 +89,7 @@ class Pipeline:
         jd = self.jobs.get(jd_id)
         if jd is None:
             raise ProcessingError("jd_not_found", "Job description not found.", 404)
+        require_jd_in_workspace(jd, workspace)
         if reset:
             self.reset_workspace(workspace, actor="system", reason="Demo batch started on a clean workspace")
         resolved = self.scorer.resolve_provider(provider or self.store.settings.get("provider"))
@@ -132,6 +153,8 @@ class Pipeline:
         jd = self.jobs.get(jd_id or batch["jd_id"])
         if jd is None:
             raise ProcessingError("jd_not_found", "Job description not found.", 404)
+        if jd_id:
+            require_jd_in_workspace(jd, batch["workspace"])
         if batch["status"] == "running":
             raise ProcessingError("batch_running", "Wait for the batch to finish before rescoring it.", 409)
 
@@ -194,6 +217,7 @@ class Pipeline:
         batch = self.store.get_batch(batch_id)
         if batch is None:
             raise ProcessingError("batch_not_found", "Batch not found.", 404)
+        require_source_in_workspace(source, batch["workspace"])
         jd = self.jobs.get(batch["jd_id"])
         if jd is None:
             raise ProcessingError("jd_not_found", "The batch's job description was deleted.", 409)

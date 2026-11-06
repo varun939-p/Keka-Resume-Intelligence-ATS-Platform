@@ -540,6 +540,7 @@ tr.skeleton td { height: 56px; }
 .empty h3 { font-size: 14.5px; font-weight: 600; color: var(--ink); }
 .empty p { font-size: 13px; max-width: 46ch; }
 .empty .actions { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; justify-content: center; }
+.empty.compact { padding: 22px 16px 24px; gap: 8px; }
 .empty-inline { padding: 18px 2px; font-size: 13px; color: var(--muted); }
 .page-error {
   display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: var(--r-card); font-size: 13px;
